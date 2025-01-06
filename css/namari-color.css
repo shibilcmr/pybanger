@@ -170,6 +170,13 @@ body {
     color:#111;
 }
 
+@media only screen and (max-width: 768px) {
+    #banner h1 {
+        font-size: 32px; /* Adjust size for mobile */
+        line-height: 36px; /* Adjust line height for readability */
+    }
+}
+
 #banner h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size:18px;
