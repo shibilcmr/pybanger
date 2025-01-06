@@ -785,6 +785,9 @@ h6 {
 #banner-content.row {
     padding-top: 170px;
     padding-bottom: 100px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 #banner h1 {
