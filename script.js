@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
-    
-    mobileMenuBtn.addEventListener('click', function() {
+
+    mobileMenuBtn.addEventListener('click', function () {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
     });
 
-    // Close mobile menu when clicking on a link
+    // Close mobile menu on link click
     document.querySelectorAll('#navLinks a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenuBtn.classList.remove('active');
@@ -18,76 +18,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Sticky Header on Scroll
+    // Sticky Header
     const header = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 100);
     });
 
-    // Smooth Scrolling for Anchor Links
+    // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const headerHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                const headerHeight = header.offsetHeight;
+                const top = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                window.scrollTo({ top, behavior: 'smooth' });
             }
         });
     });
 
     // Pricing Tabs
-const pricingTabs = document.querySelectorAll('.pricing-tab');
-const pricingContents = {
-    'trading-bot': document.getElementById('trading-bot-plans'),
-    'forex-vps': document.getElementById('forex-vps-plans')
-};
-
-pricingTabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-        const planType = this.getAttribute('data-plan');
-        
-        // Update active tab
-        pricingTabs.forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Show the selected content
-        Object.keys(pricingContents).forEach(key => {
-            if (key === planType) {
-                pricingContents[key].style.display = 'block';
-            } else {
-                pricingContents[key].style.display = 'none';
-            }
+    const pricingTabs = document.querySelectorAll('.pricing-tab');
+    const pricingContents = {
+        'trading-bot': document.getElementById('trading-bot-plans'),
+        'forex-vps': document.getElementById('forex-vps-plans')
+    };
+    pricingTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const planType = this.getAttribute('data-plan');
+            pricingTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            Object.keys(pricingContents).forEach(key => {
+                pricingContents[key].style.display = (key === planType) ? 'block' : 'none';
+            });
         });
     });
-});
 
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
+        question.addEventListener('click', function () {
             const isOpen = this.classList.contains('active');
-            
-            // Close all other FAQs
             faqQuestions.forEach(q => {
                 q.classList.remove('active');
                 q.nextElementSibling.style.maxHeight = null;
             });
-            
-            // Toggle current FAQ if it wasn't open
             if (!isOpen) {
                 this.classList.add('active');
                 const answer = this.nextElementSibling;
@@ -106,17 +83,16 @@ pricingTabs.forEach(tab => {
     const copyButtons = document.querySelectorAll('.copy-btn');
     const confirmPaymentLink = document.getElementById('confirmPayment');
 
-    // Open modal when pricing button is clicked
+    // Open payment modal only for buttons with data-plan
     pricingButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        const plan = button.getAttribute('data-plan');
+        if (!plan) return;
+
+        button.addEventListener('click', function (e) {
             e.preventDefault();
-            const plan = this.getAttribute('data-plan');
             let serviceText = '';
-            
-            switch(plan) {
+            switch (plan) {
                 case 'starter':
-                    serviceText = '$299';
-                    break;
                 case 'professional':
                     serviceText = '$299';
                     break;
@@ -124,7 +100,6 @@ pricingTabs.forEach(tab => {
                     serviceText = '$12';
                     break;
             }
-            
             selectedService.textContent = serviceText;
             paymentModal.style.display = 'flex';
             document.body.classList.add('no-scroll');
@@ -136,7 +111,7 @@ pricingTabs.forEach(tab => {
         paymentModal.style.display = 'none';
         document.body.classList.remove('no-scroll');
     });
-    
+
     window.addEventListener('click', (e) => {
         if (e.target === paymentModal) {
             paymentModal.style.display = 'none';
@@ -146,29 +121,23 @@ pricingTabs.forEach(tab => {
 
     // Switch between payment methods
     paymentMethods.forEach(method => {
-        method.addEventListener('click', function() {
+        method.addEventListener('click', function () {
             const methodType = this.getAttribute('data-method');
-            
             paymentMethods.forEach(m => m.classList.remove('active'));
             this.classList.add('active');
-            
             paymentDetails.forEach(detail => {
-                detail.style.display = 'none';
-                if (detail.id === `${methodType}Details`) {
-                    detail.style.display = 'block';
-                }
+                detail.style.display = (detail.id === `${methodType}Details`) ? 'block' : 'none';
             });
         });
     });
 
     // Copy wallet/UPI address
     copyButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const address = this.getAttribute('data-address');
             navigator.clipboard.writeText(address).then(() => {
                 const originalHTML = this.innerHTML;
                 this.innerHTML = '<i class="fas fa-check"></i>';
-                
                 setTimeout(() => {
                     this.innerHTML = originalHTML;
                 }, 2000);
@@ -177,95 +146,69 @@ pricingTabs.forEach(tab => {
     });
 
     // Confirm payment
-    confirmPaymentLink.addEventListener('click', function(e) {
+    confirmPaymentLink.addEventListener('click', function (e) {
         e.preventDefault();
-        // Here you would typically open a form or redirect to a confirmation page
         alert('Please send your payment receipt to pybanger@gmail.com or contact @pybanger on Telegram for activation.');
     });
 
-    // Form Submission
+    // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just show an alert
             alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
-            
-            // Reset the form
             this.reset();
         });
     }
 
-    // Animate elements on scroll
-    const animateOnScroll = function() {
+    // Scroll animation
+    const animateOnScroll = function () {
         const elements = document.querySelectorAll('.feature-card, .pricing-card, .testimonial-card');
-        
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
             if (elementPosition < windowHeight - 100) {
                 element.classList.add('animate');
             }
         });
     };
-    
-    // Initial check
     animateOnScroll();
-    
-    // Check on scroll
     window.addEventListener('scroll', animateOnScroll);
 
-    // Back to Top Button
+    // Back to top
     const backToTopButton = document.createElement('button');
     backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
     backToTopButton.classList.add('back-to-top');
     document.body.appendChild(backToTopButton);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-    
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+
+    window.addEventListener('scroll', function () {
+        backToTopButton.classList.toggle('show', window.pageYOffset > 300);
     });
 
-    // Testimonials Slider (simple version)
+    backToTopButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Testimonials Slider
     const testimonials = document.querySelectorAll('.testimonial-card');
     let currentTestimonial = 0;
-    
     function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.style.display = i === index ? 'block' : 'none';
+        testimonials.forEach((t, i) => {
+            t.style.display = (i === index) ? 'block' : 'none';
         });
     }
-    
-    // Auto-rotate testimonials
     setInterval(() => {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
     }, 5000);
-    
-    // Initialize
     showTestimonial(0);
 });
 
-// Add some basic animations
+// Add animations
 const style = document.createElement('style');
 style.textContent = `
     .feature-card, .pricing-card, .testimonial-card {
@@ -273,12 +216,10 @@ style.textContent = `
         transform: translateY(30px);
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    
     .feature-card.animate, .pricing-card.animate, .testimonial-card.animate {
         opacity: 1;
         transform: translateY(0);
     }
-    
     .back-to-top {
         position: fixed;
         bottom: 30px;
@@ -300,26 +241,17 @@ style.textContent = `
         transition: all 0.3s ease;
         z-index: 999;
     }
-    
     .back-to-top.show {
         opacity: 1;
         visibility: visible;
     }
-    
     .back-to-top:hover {
         background-color: var(--primary-dark);
         transform: translateY(-3px);
     }
-    
     .no-scroll {
         overflow: hidden;
     }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    
     .modal {
         animation: fadeIn 0.3s;
     }
