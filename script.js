@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Confirm payment
     confirmPaymentLink.addEventListener('click', function (e) {
         e.preventDefault();
-        alert('Please send your payment receipt to pybanger@gmail.com or contact @pybanger on Telegram for activation.');
+        alert('After payment, send your transaction ID (payment proof) via Telegram, WhatsApp, or email to pybanger@gmail.com');
     });
 
     // Contact Form Submission
