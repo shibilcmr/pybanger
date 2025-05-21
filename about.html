@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>About pybanger — Algorithmic Trading Bots</title>
+  <meta name="description" content="Learn about Pybanger’s mission and trading bots.">
+  <meta name="theme-color" content="#0d0d0d"> <!-- Matches manifest theme -->
+  <meta name="keywords" content="Pybanger, algorithmic trading, forex bots, auto trading, mt5, mt4, trading software, pybanger, pybanger EA, pybanger bot">
+  <meta name="author" content="pybanger.com">
+
+  <meta property="og:image" content="https://pybanger.com/logo.jpg" />
+  <meta name="twitter:image" content="https://pybanger.com/logo.jpg" />
+
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://pybanger.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pybanger.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://pybanger.com/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://pybanger.com/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://pybanger.com/android-chrome-512x512.png">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="site.webmanifest">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "pybanger",
+      "url": "https://pybanger.com",
+      "logo": "https://pybanger.com/logo.jpg",
+      "sameAs": [
+        "https://www.instagram.com/pybanger",
+        "https://www.youtube.com/@pybanger" 
+      ]
+    }
+</script>
+
+  
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://pybanger.com/logo.jpg" alt="Logo" style="height: 40px;">
+                <span>pybanger</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="https://pybanger.com/#services">Home</a>
+                <a href="https://pybanger.com/#features">About</a>
+                <a href="https://pybanger.com/#contact">Contact</a>
+                <a href="https://pybanger.com/#faq">FAQ</a>
+            </div>
+
+
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    
+
+    <!-- Pricing Section -->
+<section class="section" id="pricing">
+    <div class="container">
+        <div class="section-header center">
+            <h2 class="section-title">Welcome to pybanger</h2>
+            <p class="section-description">AI Trading Partner: Smarter, Simpler, Profitable. A new era in trading</p>
+        </div>
+        
+        <div class="pricing-tabs">
+            <button class="pricing-tab active" data-plan="trading-bot">Trading Bot</button>
+            <button class="pricing-tab" data-plan="forex-vps">Forex Vps</button>
+        </div>
+        
+        <!-- Trading Bot Plans (shown by default) -->
+        <div class="pricing-content" id="trading-bot-plans">
+            <div class="pricing-grid">
+                <div class="pricing-card1">
+                    <div class="pricing-header1">
+                        <h3>Get My Trading Bot – Free!</h3>
+                        <p>Get a free bot connection! Just open a new live MT5 account with our partner broker, then send your account details via Telegram, Gmail, or WhatsApp. Once verified, we’ll connect it for free!</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$0</span>
+                        <span class="period">/lifetime</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 24/5 Live Support</li>
+                     
+                    </ul>
+                    <button onclick="window.location.href='https://portal.fpmarkets.com/int-EN/register?redir=stv&fpm-affiliate-utm-source=IB&fpm-affiliate-agt=56066';" class="btn btn-outline btn-block pricing-btn" >Get Started</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>pybanger EA</h3>
+                        <p>Purchase the bot file</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$299</span>
+                        <span class="period">/lifetime</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Lifetime License</li>
+                        <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
+                        <li><i class="fas fa-check"></i> Risk Management Tools</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block pricing-btn" data-plan="professional">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Forex VPS Plans (hidden by default) -->
+        <div class="pricing-content" id="forex-vps-plans" style="display: none;">
+            <div class="pricing-grid">
+                
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Get VPS</h3>
+                        <p>After completing your payment,</p>
+                        <p>please email the transaction hash to pybanger@gmail.com</p>
+                        <p>You will receive your VPS login credentials within 1 hour.</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$12</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 1vCPU </li>
+                        <li><i class="fas fa-check"></i> 1GBRAM </li>
+                        <li><i class="fas fa-check"></i> 20GBStorage </li>
+                        <li><i class="fas fa-check"></i> 300 GBBandwidth </li>
+                        <li><i class="fas fa-check"></i> SSLFree </li>
+                    </ul>
+                    <button class="btn btn-primary btn-block pricing-btn" data-plan="vps-pro">Buy Now</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Renew VPS</h3>
+                        <p>Extend your existing VPS subscription</p>
+                        <p>After completing the payment, email your transaction hash to pybanger@gmail.com </p>
+                        <p>Activation will be completed within 1 hour.</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price">$12</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Same configuration</li>
+                        <li><i class="fas fa-check"></i> Seamless renewal</li>
+                        <li><i class="fas fa-check"></i> No data loss</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block pricing-btn" data-plan="vps-pro">Renew Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pricing-note">
+            <p>After payment, send your transaction ID (payment proof) via Telegram, WhatsApp, or email to <a href="#contact">pybanger@gmail.com</a>.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Why Choose pybanger EA</span>
+                <p class="section-description" style="text-align: left;">Our fully automated scalping bot delivers consistent returns with low risk—no martingale, no grid. Optimized for Gold (XAUUSD), it trades fast and smart, making profits simple for both beginners and pros.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Adaptive AI</h3>
+                    <p>Smart trade exits when the market turns, minimizing losses and optimizing results</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Protection</h3>
+                    <p>Risk protection is ensured with a fixed lot size and stop-loss, using 1% equity risk for a low-risk strategy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Strategy</h3>
+                    <p>The bot follows a trend-following strategy to trade with the market trends for profit.</p>
+                </div>
+                    
+    
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Support</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does the trading bot work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our trading bot uses advanced algorithms to analyze market conditions, identify trading opportunities, and execute trades automatically based on predefined strategies. It monitors the market 24/5 and makes decisions based on technical indicators, price action, and market sentiment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What's the minimum account size needed?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The minimum deposit is $100, but we recommend starting with at least $500 to effectively implement risk management strategies. However, the bot is compatible with any account size, and we offer guidance on position sizing based on your account balance.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I need trading experience to use this?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No prior trading experience is necessary. Our bot is designed to work autonomously, and we provide complete setup instructions and ongoing support. However, basic understanding of forex trading concepts will help you better customize the bot to your preferences.</p>
+                    </div>
+                </div>
+                
+
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What brokers do you support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our bot currently works with FP Markets. We provide special integration with FP Markets and offer assistance with setup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <span class="section-subtitle">Contact Us</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p>Have questions or need assistance? Our support team is ready to help with any inquiries about our products and services.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <a href="mailto:support@pybanger.com">pybanger@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/pybanger">@pybanger</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/+919526519378">+919526519378</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3 class="modal-title">Complete Your Purchase</h3>
+            <p id="selected-service" class="selected-service">$299</p>
+            
+            <div class="payment-options">
+                <div class="payment-method active" data-method="crypto">
+                    <i class="fab fa-bitcoin"></i>
+                    <span>Crypto</span>
+                </div>
+                <div class="payment-method" data-method="binance">
+                    <i class="fas fa-wallet"></i>
+                    <span>Binance Pay</span>
+                </div>
+                <div class="payment-method" data-method="upi">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>UPI</span>
+                </div>
+            </div>
+            
+            <div class="payment-details" id="cryptoDetails">
+                <h4>Pay with Crypto (USDT)</h4>
+                <p>Send exact amount to the wallet address below</p>
+                <div class="wallet-address">
+                    <p>USDT (TRC20)</p>
+                    <div class="address-box">
+                        <code>TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM</code>
+                        <button class="copy-btn" data-address="TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="payment-instructions">
+                    <p><strong>Important:</strong> Send only USDT on TRC20 network. After payment, send your transaction ID to @pybanger on Telegram</p>
+                </div>
+            </div>
+            
+            <div class="payment-details" id="binanceDetails" style="display:none;">
+                <h4>Pay with Binance Pay</h4>
+                <p>Send exact amount to the Binance ID below</p>
+                
+                <div class="wallet-address">
+                    <p>Binance ID:</p>
+                    <div class="address-box">
+                        <code>40746822</code>
+                        <button class="copy-btn" data-address="40746822">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="payment-instructions">
+                    <ol>
+                        <li>Open Binance App on your phone</li>
+                        <li>Tap on the "Scan" icon or select "Send"</li>
+                        <li>Enter this Binance Pay ID: 40746822</li>
+                        <li>Confirm the payment details and complete transaction</li>
+                        <li>Send payment screenshot to @pybanger on Telegram</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="payment-details" id="upiDetails" style="display:none;">
+                <h4>Pay with UPI</h4>
+                <p>Send exact amount to the UPI ID below</p>
+                
+                
+                <div class="upi-id">
+                    <p>UPI ID:</p>
+                    <div class="address-box">
+                        <code>pybanger@upi</code>
+                        <button class="copy-btn" data-address="pybanger@upi">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="payment-instructions">
+                    <p>After payment, send your transaction ID to @pybanger on Telegram</p>
+                </div>
+            </div>
+            
+            <div class="payment-confirm">
+                <p>Already paid? <a href="#" id="confirmPayment">Click here to confirm</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>pybanger</h3>
+                        <p style="font-size: 13px;">Listen up, traders.</p>
+                        <p style="font-size: 11px;">I’m glad you’re part of this journey into the world of algorithmic trading. At Pybanger, our mission is to equip you with powerful tools that enhance your decision-making and simplify your trading experience.
+We’re here to support you with technology that works for you — because smart trading starts with smart tools.</p>
+                   
+                </div>
+                <div class="footer-column">
+                    <h3>ADMINISTRATIVE</h3>
+                    <ul class="footer-links" style="list-style: none; padding-left: 0;">
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="privacy-policy.html">Privacy and Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" style="list-style: none; padding-left: 0;">
+                    <h3>Risk warning</h3>
+                    <p style="font-size: 11px;">Risk Warning
+Trading foreign exchange (Forex) involves a high level of risk and may not be suitable for all users. Leverage can amplify both gains and losses. Before using any automated tools or trading software, you should carefully assess your financial goals, trading experience, and risk tolerance.
+Always trade responsibly and with funds you can afford to lose.</p>
+                </div>
+            </div>
+            <p style="font-size: 10px; color: rgb(163, 161, 161);">Caution: 
+This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn’t predict future results. The developer isn’t liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren’t guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn’t liable for changes.All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 PyBanger. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!window.location.hash) {
+      history.replaceState(null, '', '#features'); // change URL without reload
+      const aboutSection = document.getElementById('features');
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
