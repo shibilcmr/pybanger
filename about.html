@@ -1,469 +1,1580 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>About pybanger — Algorithmic Trading Bots</title>
-  <meta name="description" content="Learn about Pybanger’s mission and trading bots.">
-  <meta name="theme-color" content="#0d0d0d"> <!-- Matches manifest theme -->
-  <meta name="keywords" content="Pybanger, algorithmic trading, forex bots, auto trading, mt5, mt4, trading software, pybanger, pybanger EA, pybanger bot">
-  <meta name="author" content="pybanger.com">
-
-  <meta property="og:image" content="https://pybanger.com/logo.jpg" />
-  <meta name="twitter:image" content="https://pybanger.com/logo.jpg" />
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About pybanger — Algorithmic Trading Bots</title>
+    <meta name="description" content="Learn about Pybanger’s mission and trading bots.">
+    <meta name="theme-color" content="#0d0d0d"> <!-- Matches manifest theme -->
+    <meta name="keywords" content="Pybanger, algorithmic trading, forex bots, auto trading, mt5, mt4, trading software, pybanger, pybanger EA, pybanger bot">
+    <meta name="author" content="pybanger.com">
 
 
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <meta property="og:image" content="https://pybanger.com/logo.jpg" />
+    <meta property="og:title" content="pybanger - AI Trading Partner" />
+    <meta property="og:description" content="pybanger EA for MT4: Advanced forex trading automation with 24/7 market analysis for precise trades and consistent profits." />
+    <meta property="og:url" content="https://pybanger.com/" />
+    <meta property="og:type" content="website" />
 
-  <!-- Favicons -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://pybanger.com/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://pybanger.com/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://pybanger.com/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://pybanger.com/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="https://pybanger.com/android-chrome-512x512.png">
+    <meta name="twitter:image" content="https://pybanger.com/logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="pybanger - AI Trading Partner" />
+    <meta name="twitter:description" content="pybanger EA for MT4: Advanced forex trading automation with 24/7 market analysis for precise trades and consistent profits." />
 
-  <!-- Manifest -->
-  <link rel="manifest" href="site.webmanifest">
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "pybanger",
-      "url": "https://pybanger.com",
-      "logo": "https://pybanger.com/logo.jpg",
-      "sameAs": [
-        "https://www.instagram.com/pybanger",
-        "https://www.youtube.com/@pybanger" 
-      ]
-    }
-</script>
+    <link rel="canonical" href="https://pybanger.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+        <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  
-</head>
+    <!-- Favicons -->
+    <link rel="icon" href="https://pybanger.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="pybanger.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://pybanger.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://pybanger.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://pybanger.com/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://pybanger.com/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://pybanger.com/android-chrome-512x512.png">
 
-<body>
-    <!-- Navigation -->
+    <!-- Manifest -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "pybanger",
+        "url": "https://pybanger.com",
+        "logo": "https://pybanger.com/logo.jpg",
+        "sameAs": [
+            "https://www.instagram.com/pybanger",
+            "https://www.youtube.com/@shibilcmr" 
+        ]
+        }
+    </script>
+
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --primary-light: #4f6ef7;
+            --primary-bg: rgba(67, 97, 238, 0.1);
+            --dark: #111827;
+            --darker: #0f172a;
+            --light: #f9fafb;
+            --lighter: #ffffff;
+            --gray: #6b7280;
+            --light-gray: #e5e7eb;
+            --success: #10b981;
+            --success-light: rgba(16, 185, 129, 0.1);
+            --gold: #f59e0b;
+            --gold-light: rgba(245, 158, 11, 0.1);
+            --border-radius: 12px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background: var(--lighter);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 70px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            height: 100%;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(79,70,229,0.1);
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--darker);
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text span {
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--dark);
+            padding: 0.5rem;
+            z-index: 101;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: var(--lighter);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 100;
+            padding: 5rem 1.5rem 1.5rem;
+            transition: transform 0.3s ease-out;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(-300px);
+        }
+        
+        .mobile-menu a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.75rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            background: #f5f3ff;
+            
+        }
+        
+        .mobile-menu a:hover {
+            background: #f5f3ff;
+            color: var(--primary);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            width: 100%;
+        }
+        
+        .section {
+            padding: 4rem 1.5rem;
+        }
+        
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .section-header.center {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--darker);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .section-subtitle {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+        }
+        
+        .section-description {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
+        header {
+            text-align: center;
+            margin: 1.5rem 0 3rem;
+            position: relative;
+        }
+        
+        .welcome-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--darker);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .tagline {
+            color: var(--gray);
+            font-size: 1.25rem;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .card {
+            background: var(--lighter);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--darker);
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: -0.25px;
+        }
+        
+        .card-subtitle {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .option {
+            padding: 1.5rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option:hover {
+            border-color: var(--primary-light);
+            box-shadow: 0 5px 15px -5px rgba(79,70,229,0.1);
+        }
+        
+        .option-selected {
+            border-color: var(--primary);
+            background-color: var(--primary-bg);
+        }
+        
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--darker);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .option-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+            
+            
+        }
+        
+        .price-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.5rem 1rem;
+            border-radius: 0 var(--border-radius) 0 var(--border-radius);
+            font-weight: 700;
+            font-size: 1rem;
+            z-index: 1;
+        }
+        
+        .price-tag.free {
+            background: linear-gradient(135deg, var(--success), #34d399);
+            color: white;
+        }
+        
+        .price-tag.premium {
+            background: linear-gradient(135deg, var(--gold), #fbbf24);
+            color: white;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            letter-spacing: 0.2px;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(79,70,229,0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79,70,229,0.3);
+        }
+        
+        .btn-outline {
+            background: white;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: #f5f3ff;
+            transform: translateY(-2px);
+        }
+        
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            width: auto;
+            margin-top: 0;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+            font-weight: 600;
+        }
+        
+        .step-content {
+            flex: 1;
+            font-size: 1rem;
+        }
+        
+        .step-content strong {
+            color: var(--darker);
+            font-weight: 600;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .payment-method {
+            flex: 1;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .payment-method:hover, .payment-method-active {
+            border-color: var(--primary);
+            background: var(--primary-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px -5px rgba(79,70,229,0.1);
+        }
+        
+        .payment-details {
+            display: none;
+            margin-top: 1.5rem;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .payment-details-active {
+            display: block;
+        }
+        
+        .payment-info {
+            background: var(--primary-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            word-break: break-all;
+            font-size: 0.95rem;
+            text-align: center;
+            border: 1px dashed var(--primary-light);
+            color: var(--darker);
+            position: relative;
+            padding-right: 100px;
+        }
+
+        .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .copy-btn i {
+            font-size: 0.9rem;
+        }
+        
+        .payment-instructions {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--gray);
+            font-size: 1rem;
+            padding-bottom: 2rem;
+        }
+        
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+            display: inline-block;
+            margin-top: 0.25rem;
+            transition: all 0.2s;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--lighter);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--light-gray);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background-color: var(--primary-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            background-color: var(--lighter);
+            border: 1px solid var(--light-gray);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--lighter);
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--darker);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--light);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-answer p {
+            padding: 0 0 1.25rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            padding-right: 0;
+        }
+
+        .contact-methods {
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.125rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            color: var(--lighter);
+            transform: translateY(-3px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: var(--lighter);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--light-gray);
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        /* ==========================================================================
+        Footer with Sticky Behavior
+        ========================================================================== */
+        .footer {
+            text-align: center;
+                    font-size: 0.6875rem;
+                    color: var(--text-muted);
+                    padding: 0.75rem;
+                    border-top: 1px solid var(--border);
+                    flex-shrink: 0;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-column p {
+            opacity: 0.7;
+            margin-bottom: 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.7;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+            font-size: 0.875rem;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-legal a {
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .footer-legal a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.875rem;
+        }
+
+        .risk-warning {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .risk-warning h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-light);
+        }
+
+        .risk-warning p {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 90;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .container {
+                padding: 1.25rem;
+            }
+            
+            .welcome-text {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .option {
+                padding: 1.25rem 1rem 1.25rem 1.25rem;
+            }
+            
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .welcome-text {
+                font-size: 1.8rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+            }
+            
+            .btn {
+                padding: 0.9rem;
+                font-size: 0.95rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+    </head>
+    <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="https://pybanger.com/logo.jpg" alt="Logo" style="height: 40px;">
-                <span>pybanger</span>
-            </a>
-            
-            <div class="nav-links" id="navLinks">
-                <a href="https://pybanger.com/#services">Home</a>
-                <a href="https://pybanger.com/#features">About</a>
-                <a href="https://pybanger.com/#contact">Contact</a>
-                <a href="https://pybanger.com/#faq">FAQ</a>
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="https://pybanger.com/logo.jpg" alt="Logo" style="height: 40px;">
+                </div>
+                <div class="logo-text">pybanger<span></span></div>
             </div>
-
-
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-links">
+                <a href="https://pybanger.com/">Home</a>
+                <a href="#features">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="https://pybanger.com/" onclick="toggleMobileMenu()">Home</a>
+            <a href="#features" onclick="toggleMobileMenu()">About</a>
+            <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+            <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+            
+        </div>
+        <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
     </nav>
 
-    
-
-    <!-- Pricing Section -->
-<section class="section" id="pricing">
     <div class="container">
-        <div class="section-header center">
-            <h2 class="section-title">Welcome to pybanger</h2>
-            <p class="section-description">AI Trading Partner: Smarter, Simpler, Profitable. A new era in trading</p>
-        </div>
+        <header>
+            <div class="welcome-text">Welcome to pybanger</div>
+            <div class="tagline">AI Trading Partner: Smarter, Simpler, Profitable. A new era in trading.</div>
+        </header>
         
-        <div class="pricing-tabs">
-            <button class="pricing-tab active" data-plan="trading-bot">Trading Bot</button>
-            <button class="pricing-tab" data-plan="forex-vps">Forex Vps</button>
-        </div>
-        
-        <!-- Trading Bot Plans (shown by default) -->
-        <div class="pricing-content" id="trading-bot-plans">
-            <div class="pricing-grid">
-                <div class="pricing-card1">
-                    <div class="pricing-header1">
-                        <h3>Get My Trading Bot – Free!</h3>
-                        <p>Get a free bot connection! Just open a new live MT5 account with our partner broker, then send your account details via Telegram, Gmail, or WhatsApp. Once verified, we’ll connect it for free!</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price">$0</span>
-                        <span class="period">/lifetime</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 24/5 Live Support</li>
-                     
-                    </ul>
-                    <button onclick="window.location.href='https://portal.fpmarkets.com/int-EN/register?redir=stv&fpm-affiliate-utm-source=IB&fpm-affiliate-agt=56066';" class="btn btn-outline btn-block pricing-btn" >Get Started</button>
-                </div>
-                
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>pybanger EA</h3>
-                        <p>Purchase the bot file</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price">$299</span>
-                        <span class="period">/lifetime</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Lifetime License</li>
-                        <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
-                        <li><i class="fas fa-check"></i> Risk Management Tools</li>
-                    </ul>
-                    <button class="btn btn-primary btn-block pricing-btn" data-plan="professional">Buy Now</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Forex VPS Plans (hidden by default) -->
-        <div class="pricing-content" id="forex-vps-plans" style="display: none;">
-            <div class="pricing-grid">
-                
-                
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Get VPS</h3>
-                        <p>After completing your payment,</p>
-                        <p>please email the transaction hash to pybanger@gmail.com</p>
-                        <p>You will receive your VPS login credentials within 1 hour.</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price">$12</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 1vCPU </li>
-                        <li><i class="fas fa-check"></i> 1GBRAM </li>
-                        <li><i class="fas fa-check"></i> 20GBStorage </li>
-                        <li><i class="fas fa-check"></i> 300 GBBandwidth </li>
-                        <li><i class="fas fa-check"></i> SSLFree </li>
-                    </ul>
-                    <button class="btn btn-primary btn-block pricing-btn" data-plan="vps-pro">Buy Now</button>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Renew VPS</h3>
-                        <p>Extend your existing VPS subscription</p>
-                        <p>After completing the payment, email your transaction hash to pybanger@gmail.com </p>
-                        <p>Activation will be completed within 1 hour.</p>
-                    </div>
-                    <div class="pricing-price">
-                        <span class="price">$12</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Same configuration</li>
-                        <li><i class="fas fa-check"></i> Seamless renewal</li>
-                        <li><i class="fas fa-check"></i> No data loss</li>
-                        <li><i class="fas fa-check"></i> Priority support</li>
-                    </ul>
-                    <button class="btn btn-outline btn-block pricing-btn" data-plan="vps-pro">Renew Now</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="pricing-note">
-            <p>After payment, send your transaction ID (payment proof) via Telegram, WhatsApp, or email to <a href="#contact">pybanger@gmail.com</a>.</p>
-        </div>
-    </div>
-</section>
-
-
-
-    <!-- Features Section -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Why Choose pybanger EA</span>
-                <p class="section-description" style="text-align: left;">Our fully automated scalping bot delivers consistent returns with low risk—no martingale, no grid. Optimized for Gold (XAUUSD), it trades fast and smart, making profits simple for both beginners and pros.</p>
+        <!-- Option Selection -->
+        <div class="card" id="option-selection">
+            <h2 class="card-title">Select your plan</h2>
+            <p class="card-subtitle">Start Trading Smarter with pybanger</p>
+            
+            <div class="option" onclick="selectOption(1)">
+                <div class="price-tag free">FREE</div>
+                <div class="option-title">Free bot connection!</div>
+                <div class="option-desc">Our experts will install and configure the bot on your account with optimal settings</div>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Adaptive AI</h3>
-                    <p>Smart trade exits when the market turns, minimizing losses and optimizing results</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Risk Protection</h3>
-                    <p>Risk protection is ensured with a fixed lot size and stop-loss, using 1% equity risk for a low-risk strategy.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Strategy</h3>
-                    <p>The bot follows a trend-following strategy to trade with the market trends for profit.</p>
-                </div>
-                    
-    
-            </div>
-        </div>
-    </section>
-
-
-
-    
-
-    
-
-    <!-- FAQ Section -->
-    <section class="section" id="faq">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Support</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="option" onclick="selectOption(2)">
+                <div class="price-tag premium">$299</div>
+                <div class="option-title">pybanger EA</div>
+                <div class="option-desc">Receive the complete .ex4 file with full usage rights for your trading</div>
             </div>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How does the trading bot work?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our trading bot uses advanced algorithms to analyze market conditions, identify trading opportunities, and execute trades automatically based on predefined strategies. It monitors the market 24/5 and makes decisions based on technical indicators, price action, and market sentiment.</p>
-                    </div>
+            <button class="btn btn-primary" onclick="proceedToNextStep()">Continue →</button>
+        </div>
+        
+        <!-- Free Setup Option -->
+        <div class="card hidden" id="free-setup">
+            <h2 class="card-title">Get free bot connection!</h2>
+            <p class="card-subtitle">Let our experts handle everything for you in 3 simple steps</p>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>Open a trading account</strong> through our preferred broker:
+                    <a href="https://portal.fpmarkets.com/int-EN/register?redir=stv&fpm-affiliate-utm-source=IB&fpm-affiliate-agt=56066" class="link" target="_blank">FP Markets Registration</a>
                 </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What's the minimum account size needed?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The minimum deposit is $100, but we recommend starting with at least $500 to effectively implement risk management strategies. However, the bot is compatible with any account size, and we offer guidance on position sizing based on your account balance.</p>
-                    </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>Securely share your MT4 credentials</strong> (Login ID, Password, Server) with our team
                 </div>
-                
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do I need trading experience to use this?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No prior trading experience is necessary. Our bot is designed to work autonomously, and we provide complete setup instructions and ongoing support. However, basic understanding of forex trading concepts will help you better customize the bot to your preferences.</p>
-                    </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>We'll optimize and activate pybanger</strong> - Just relax while we handle the technical setup
                 </div>
-                
+            </div>
+            
+            <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Contact Our Team</button>
+            <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
+        </div>
+        
+        <!-- Purchase Option -->
+        <div class="card hidden" id="purchase-option">
+            <h2 class="card-title">Complete Your Purchase</h2>
+            <p class="card-subtitle">$299 - pybanger Trading Bot License</p>
+            
+            <div class="payment-methods">
+                <div class="payment-method" onclick="selectPaymentMethod('crypto')">
+                    USDT (Crypto)
+                </div>
+                <div class="payment-method" onclick="selectPaymentMethod('binance')">
+                    Binance Pay
+                </div>
+                <div class="payment-method" onclick="selectPaymentMethod('upi')">
+                    ₹ UPI Transfer
+                </div>
+            </div>
+            
+            <!-- Crypto Payment -->
+            <div class="payment-details" id="crypto-payment">
+                <div class="payment-info">
+                    TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM
+                    <button class="copy-btn" onclick="copyToClipboard('TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM', this)">Copy</button>
+                </div>
+                <div class="payment-instructions">
+                    Send <strong>exactly $299 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
+            </div>
 
+            <!-- Binance Pay -->
+            <div class="payment-details" id="binance-payment">
+                <div class="payment-info">
+                    40746822
+                    <button class="copy-btn" onclick="copyToClipboard('40746822', this)">Copy</button>
+                </div>
+                <div class="payment-instructions">
+                    1. Open your Binance mobile app<br>
+                    2. Navigate to "Send" and enter recipient ID<br>
+                    3. Transfer $299 equivalent<br>
+                    4. Send payment confirmation to @pybanger
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
+            </div>
+
+            <!-- UPI Payment -->
+            <div class="payment-details" id="upi-payment">
+                <div class="payment-info">
+                    mujeecmr@okicici
+                    <button class="copy-btn" onclick="copyToClipboard('mujeecmr@okicici', this)">Copy</button>
+                </div>
+                <div class="payment-instructions">
+                    Transfer the rupee equivalent of $299 (current rate) to this UPI address. After successful transfer, please share the payment confirmation with @pybanger on Telegram for license activation.
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
+            </div>
+            
+            <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
+        </div>
+
+
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Why Choose pybanger EA</h2>
+                    <p class="section-description">Our fully automated scalping bot delivers consistent returns with low risk—no martingale, no grid. Optimized for Gold (XAUUSD), it trades fast and smart, making profits simple for both beginners and pros.</p>
+                </div>
                 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What brokers do you support?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our bot currently works with FP Markets. We provide special integration with FP Markets and offer assistance with setup</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Adaptive AI</h3>
+                        <p>Smart trade exits when the market turns, minimizing losses and optimizing results</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Risk Protection</h3>
+                        <p>Risk protection is ensured with a fixed lot size and stop-loss, using 1% equity risk for a low-risk strategy.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Strategy</h3>
+                        <p>The bot follows a trend-following strategy to trade with the market trends for profit.</p>
+                    </div>
+                        
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Support</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How does the trading bot work?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our trading bot uses advanced algorithms to analyze market conditions, identify trading opportunities, and execute trades automatically based on predefined strategies. It monitors the market 24/5 and makes decisions based on technical indicators, price action, and market sentiment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What's the minimum account size needed?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The minimum deposit is $100, but we recommend starting with at least $500 to effectively implement risk management strategies. However, the bot is compatible with any account size, and we offer guidance on position sizing based on your account balance.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I need trading experience to use this?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No prior trading experience is necessary. Our bot is designed to work autonomously, and we provide complete setup instructions and ongoing support. However, basic understanding of forex trading concepts will help you better customize the bot to your preferences.</p>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What brokers do you support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our bot currently works with FP Markets. We provide special integration with FP Markets and offer assistance with setup</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <span class="section-subtitle">Contact Us</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p>Have questions or need assistance? Our support team is ready to help with any inquiries about our products and services.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Us</h4>
-                                <a href="mailto:support@pybanger.com">pybanger@gmail.com</a>
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <span class="section-subtitle">Contact Us</span>
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p>Have questions or need assistance? Our support team is ready to help with any inquiries about our products and services.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <a href="mailto:support@pybanger.com">pybanger@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fab fa-telegram"></i>
+                                <div>
+                                    <h4>Telegram</h4>
+                                    <a href="https://t.me/pybanger">@pybanger</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/+919526519378">+919526519378</a>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <i class="fab fa-telegram"></i>
-                            <div>
-                                <h4>Telegram</h4>
-                                <a href="https://t.me/pybanger">@pybanger</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <a href="https://wa.me/+919526519378">+919526519378</a>
-                            </div>
-                        </div>
                     </div>
                     
+                    
                 </div>
-                
-                
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Payment Modal -->
-    <div class="modal" id="paymentModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h3 class="modal-title">Complete Your Purchase</h3>
-            <p id="selected-service" class="selected-service">$299</p>
-            
-            <div class="payment-options">
-                <div class="payment-method active" data-method="crypto">
-                    <i class="fab fa-bitcoin"></i>
-                    <span>Crypto</span>
-                </div>
-                <div class="payment-method" data-method="binance">
-                    <i class="fas fa-wallet"></i>
-                    <span>Binance Pay</span>
-                </div>
-                <div class="payment-method" data-method="upi">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>UPI</span>
-                </div>
-            </div>
-            
-            <div class="payment-details" id="cryptoDetails">
-                <h4>Pay with Crypto (USDT)</h4>
-                <p>Send exact amount to the wallet address below</p>
-                <div class="wallet-address">
-                    <p>USDT (TRC20)</p>
-                    <div class="address-box">
-                        <code>TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM</code>
-                        <button class="copy-btn" data-address="TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="payment-instructions">
-                    <p><strong>Important:</strong> Send only USDT on TRC20 network. After payment, send your transaction ID to @pybanger on Telegram</p>
-                </div>
-            </div>
-            
-            <div class="payment-details" id="binanceDetails" style="display:none;">
-                <h4>Pay with Binance Pay</h4>
-                <p>Send exact amount to the Binance ID below</p>
-                
-                <div class="wallet-address">
-                    <p>Binance ID:</p>
-                    <div class="address-box">
-                        <code>40746822</code>
-                        <button class="copy-btn" data-address="40746822">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="payment-instructions">
-                    <ol>
-                        <li>Open Binance App on your phone</li>
-                        <li>Tap on the "Scan" icon or select "Send"</li>
-                        <li>Enter this Binance Pay ID: 40746822</li>
-                        <li>Confirm the payment details and complete transaction</li>
-                        <li>Send payment screenshot to @pybanger on Telegram</li>
-                    </ol>
-                </div>
-            </div>
-            
-            <div class="payment-details" id="upiDetails" style="display:none;">
-                <h4>Pay with UPI</h4>
-                <p>Send exact amount to the UPI ID below</p>
-                
-                
-                <div class="upi-id">
-                    <p>UPI ID:</p>
-                    <div class="address-box">
-                        <code>pybanger@upi</code>
-                        <button class="copy-btn" data-address="pybanger@upi">
-                            <i class="fas fa-copy"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="payment-instructions">
-                    <p>After payment, send your transaction ID to @pybanger on Telegram</p>
-                </div>
-            </div>
-            
-            <div class="payment-confirm">
-                <p>Already paid? <a href="#" id="confirmPayment">Click here to confirm</a></p>
-            </div>
+        
+        <div class="contact">
+            Need assistance? <a href="https://t.me/pybanger" target="_blank">Contact our support</a>
         </div>
+
+        <div class="footer-column" style="list-style: none; padding-left: 0;">
+                    <h3 style="font-size: 10px;">Risk warning</h3>
+                    <p style="font-size: 9px;">Risk Warning
+                    Trading foreign exchange (Forex) involves a high level of risk and may not be suitable for all users. Leverage can amplify both gains and losses. Before using any automated tools or trading software, you should carefully assess your financial goals, trading experience, and risk tolerance.
+                    Always trade responsibly and with funds you can afford to lose.</p>
+        </div>
+        <p style="font-size: 9px;">Caution: 
+    This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn’t predict future results. The developer isn’t liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren’t guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn’t liable for changes.All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
+            
+            
     </div>
 
-    <!-- Footer -->
+
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>pybanger</h3>
-                        <p style="font-size: 13px;">Listen up, traders.</p>
-                        <p style="font-size: 11px;">I’m glad you’re part of this journey into the world of algorithmic trading. At Pybanger, our mission is to equip you with powerful tools that enhance your decision-making and simplify your trading experience.
-We’re here to support you with technology that works for you — because smart trading starts with smart tools.</p>
-                   
-                </div>
-                <div class="footer-column">
-                    <h3>ADMINISTRATIVE</h3>
-                    <ul class="footer-links" style="list-style: none; padding-left: 0;">
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                        <li><a href="privacy-policy.html">Privacy and Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column" style="list-style: none; padding-left: 0;">
-                    <h3>Risk warning</h3>
-                    <p style="font-size: 11px;">Risk Warning
-Trading foreign exchange (Forex) involves a high level of risk and may not be suitable for all users. Leverage can amplify both gains and losses. Before using any automated tools or trading software, you should carefully assess your financial goals, trading experience, and risk tolerance.
-Always trade responsibly and with funds you can afford to lose.</p>
-                </div>
-            </div>
-            <p style="font-size: 10px; color: rgb(163, 161, 161);">Caution: 
-This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn’t predict future results. The developer isn’t liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren’t guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn’t liable for changes.All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 PyBanger. All rights reserved.</p>
-            </div>
-        </div>
+        © 2025 pybanger | <a href="terms-conditions.html">Terms</a> | <a href="privacy-policy.html">Privacy</a>
     </footer>
-    <script src="script.js"></script>
+
+
+
     <script>
-  window.addEventListener('DOMContentLoaded', () => {
+        let selectedOption = null;
+        let selectedPaymentMethod = 'crypto';
+        
+        // Set crypto as default active payment method
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.payment-method').classList.add('payment-method-active');
+            document.getElementById('crypto-payment').classList.add('payment-details-active');
+            
+            // Initialize copy buttons
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent triggering parent element clicks
+                });
+            });
+        });
+        
+        function selectOption(option) {
+            document.querySelectorAll('.option').forEach(el => {
+                el.classList.remove('option-selected');
+            });
+            
+            event.currentTarget.classList.add('option-selected');
+            selectedOption = option;
+        }
+        
+        function proceedToNextStep() {
+            if (!selectedOption) {
+                alert('Please select an option first');
+                return;
+            }
+            
+            document.getElementById('option-selection').classList.add('hidden');
+            
+            if (selectedOption === 1) {
+                document.getElementById('free-setup').classList.remove('hidden');
+            } else {
+                document.getElementById('purchase-option').classList.remove('hidden');
+            }
+        }
+        
+        function backToOptions() {
+            document.querySelectorAll('.card').forEach(el => {
+                el.classList.add('hidden');
+            });
+            document.getElementById('option-selection').classList.remove('hidden');
+        }
+        
+        function selectPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('payment-method-active');
+            });
+            event.currentTarget.classList.add('payment-method-active');
+            
+            document.querySelectorAll('.payment-details').forEach(el => {
+                el.classList.remove('payment-details-active');
+            });
+            document.getElementById(`${method}-payment`).classList.add('payment-details-active');
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('overlay');
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        function copyToClipboard(text, button) {
+            // Create a temporary textarea element
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';  // Prevent scrolling to bottom
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                // Execute the copy command
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    // Change button text temporarily
+                    button.textContent = 'Copied!';
+                    setTimeout(() => {
+                        button.textContent = 'Copy';
+                    }, 2000);
+                }
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            
+            // Remove the textarea
+            document.body.removeChild(textarea);
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function () {
+                const isOpen = this.classList.contains('active');
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+                if (!isOpen) {
+                    this.classList.add('active');
+                    const answer = this.nextElementSibling;
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        
+
+
+    </script>
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
     if (!window.location.hash) {
-      history.replaceState(null, '', '#features'); // change URL without reload
-      const aboutSection = document.getElementById('features');
-      if (aboutSection) {
+        history.replaceState(null, '', '#features'); // change URL without reload
+        const aboutSection = document.getElementById('features');
+        if (aboutSection) {
         aboutSection.scrollIntoView({ behavior: 'smooth' });
-      }
+        }
     }
-  });
-</script>
+    });
+    </script>
 
 </body>
 </html>
