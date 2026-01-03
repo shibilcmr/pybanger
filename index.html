@@ -71,6 +71,8 @@
             --success-light: rgba(16, 185, 129, 0.1);
             --gold: #f59e0b;
             --gold-light: rgba(245, 158, 11, 0.1);
+            --silver: #9ca3af;
+            --silver-light: rgba(156, 163, 175, 0.1);
             --border-radius: 12px;
             --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             --transition: all 0.3s ease;
@@ -432,7 +434,12 @@
             color: white;
         }
         
-        .price-tag.premium {
+        .price-tag.basic {
+            background: linear-gradient(135deg, var(--silver), #9ca3af);
+            color: white;
+        }
+        
+        .price-tag.pro {
             background: linear-gradient(135deg, var(--gold), #fbbf24);
             color: white;
         }
@@ -868,11 +875,11 @@
         ========================================================================== */
         .footer {
             text-align: center;
-                    font-size: 0.6875rem;
-                    color: var(--text-muted);
-                    padding: 0.75rem;
-                    border-top: 1px solid var(--border);
-                    flex-shrink: 0;
+            font-size: 0.6875rem;
+            color: var(--text-muted);
+            padding: 0.75rem;
+            border-top: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
         .footer::before {
@@ -1168,24 +1175,30 @@
     <div class="container">
         <header>
             <div class="welcome-text">Welcome to pybanger</div>
-            <div class="tagline">AI Trading Partner: Smarter, Simpler, Profitable. A new era in trading.</div>
+            <div class="tagline">Start Smart Trading</div>
         </header>
         
         <!-- Option Selection -->
         <div class="card" id="option-selection">
             <h2 class="card-title">Select your plan</h2>
-            <p class="card-subtitle">Start Trading Smarter with pybanger</p>
+           
             
             <div class="option" onclick="selectOption(1)">
                 <div class="price-tag free">FREE</div>
                 <div class="option-title">Free bot connection!</div>
-                <div class="option-desc">Our experts will install and configure the bot on your account with optimal settings</div>
+                <div class="option-desc">We connect the bot to your account</div>
             </div>
             
             <div class="option" onclick="selectOption(2)">
-                <div class="price-tag premium">$299</div>
-                <div class="option-title">pybanger EA</div>
-                <div class="option-desc">Receive the complete .py bot file with full usage rights for your trading</div>
+                <div class="price-tag basic">$249</div>
+                <div class="option-title">pymart EA Basic</div>
+                <div class="option-desc">Receive the complete .ex5 bot file with full usage rights for your trading</div>
+            </div>
+            
+            <div class="option" onclick="selectOption(3)">
+                <div class="price-tag pro">$399</div>
+                <div class="option-title">pymart EA Pro</div>
+                <div class="option-desc">Receive the complete .ex5 bot file with full usage rights for your trading</div>
             </div>
             
             <button class="btn btn-primary" onclick="proceedToNextStep()">Continue →</button>
@@ -1222,37 +1235,34 @@
             <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
         </div>
         
-        <!-- Purchase Option -->
-        <div class="card hidden" id="purchase-option">
+        <!-- Basic Purchase Option -->
+        <div class="card hidden" id="basic-purchase">
             <h2 class="card-title">Complete Your Purchase</h2>
-            <p class="card-subtitle">$299 - pybanger Trading Bot License</p>
+            <p class="card-subtitle">$249 - pybanger EA Basic Lifetime License</p>
             
             <div class="payment-methods">
-                <div class="payment-method" onclick="selectPaymentMethod('crypto')">
+                <div class="payment-method payment-method-active" onclick="selectPaymentMethod(event, 'crypto', 'basic')">
                     USDT (Crypto)
                 </div>
-                <div class="payment-method" onclick="selectPaymentMethod('binance')">
+                <div class="payment-method" onclick="selectPaymentMethod(event, 'binance', 'basic')">
                     Binance Pay
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod('upi')">
-                    ₹ UPI Transfer
                 </div>
             </div>
             
             <!-- Crypto Payment -->
-            <div class="payment-details" id="crypto-payment">
+            <div class="payment-details payment-details-active" id="crypto-payment-basic">
                 <div class="payment-info">
                     TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM
                     <button class="copy-btn" onclick="copyToClipboard('TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM', this)">Copy</button>
                 </div>
                 <div class="payment-instructions">
-                    Send <strong>exactly $299 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
+                    Send <strong>exactly $249 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
                 </div>
                 <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
             </div>
 
             <!-- Binance Pay -->
-            <div class="payment-details" id="binance-payment">
+            <div class="payment-details" id="binance-payment-basic">
                 <div class="payment-info">
                     40746822
                     <button class="copy-btn" onclick="copyToClipboard('40746822', this)">Copy</button>
@@ -1260,20 +1270,52 @@
                 <div class="payment-instructions">
                     1. Open your Binance mobile app<br>
                     2. Navigate to "Send" and enter recipient ID<br>
-                    3. Transfer $299 equivalent<br>
+                    3. Transfer $249 equivalent<br>
                     4. Send payment confirmation to @pybanger
                 </div>
                 <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
             </div>
+            
+            <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
+        </div>
 
-            <!-- UPI Payment -->
-            <div class="payment-details" id="upi-payment">
+        <!-- Pro Purchase Option -->
+        <div class="card hidden" id="pro-purchase">
+            <h2 class="card-title">Complete Your Purchase</h2>
+            <p class="card-subtitle">$399 - pybanger EA Pro Lifetime License</p>
+            
+            <div class="payment-methods">
+                <div class="payment-method payment-method-active" onclick="selectPaymentMethod(event, 'crypto', 'pro')">
+                    USDT (Crypto)
+                </div>
+                <div class="payment-method" onclick="selectPaymentMethod(event, 'binance', 'pro')">
+                    Binance Pay
+                </div>
+            </div>
+            
+            <!-- Crypto Payment -->
+            <div class="payment-details payment-details-active" id="crypto-payment-pro">
                 <div class="payment-info">
-                    mujeecmr@okicici
-                    <button class="copy-btn" onclick="copyToClipboard('mujeecmr@okicici', this)">Copy</button>
+                    TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM
+                    <button class="copy-btn" onclick="copyToClipboard('TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM', this)">Copy</button>
                 </div>
                 <div class="payment-instructions">
-                    Transfer the rupee equivalent of $299 (current rate) to this UPI address. After successful transfer, please share the payment confirmation with @pybanger on Telegram for license activation.
+                    Send <strong>exactly $399 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
+            </div>
+
+            <!-- Binance Pay -->
+            <div class="payment-details" id="binance-payment-pro">
+                <div class="payment-info">
+                    40746822
+                    <button class="copy-btn" onclick="copyToClipboard('40746822', this)">Copy</button>
+                </div>
+                <div class="payment-instructions">
+                    1. Open your Binance mobile app<br>
+                    2. Navigate to "Send" and enter recipient ID<br>
+                    3. Transfer $399 equivalent<br>
+                    4. Send payment confirmation to @pybanger
                 </div>
                 <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
             </div>
@@ -1286,17 +1328,17 @@
         <section class="section" id="features">
             <div class="container">
                 <div class="section-header center">
-                    <h2 class="section-title">Why Choose pybanger EA</h2>
-                    <p class="section-description">Our fully automated scalping bot delivers consistent returns with low risk—no martingale, no grid. Optimized for Gold (XAUUSD), it trades fast and smart, making profits simple for both beginners and pros.</p>
+                    <h2 class="section-title">Why Choose pymart EA</h2>
+                    <p class="section-description">Our fully automated scalping bot is optimized for Gold (XAUUSD). This is a Martingale EA; it starts with a trend-based first entry. If the market moves against it, the Martingale recovery begins, ensuring effective trading for both beginners and pros.</p>
                 </div>
                 
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-cogs"></i>
                         </div>
-                        <h3>Adaptive AI</h3>
-                        <p>Smart trade exits when the market turns, minimizing losses and optimizing results</p>
+                        <h3>Advanced Algorithm</h3>
+                        <p>This bot is trend-based and has a smart trading algorithm. It activates Martingale when needed. Even with Martingale on, it keeps taking trend entries for quick recovery. The exit strategies help reduce losses when the market changes.</p>
                     </div>
                     
                     <div class="feature-card">
@@ -1304,7 +1346,7 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3>Risk Protection</h3>
-                        <p>Risk protection is ensured with a fixed lot size and stop-loss, using 1% equity risk for a low-risk strategy.</p>
+                        <p>This bot has risk protection features. You can set a dollar-based drawdown limit and a percentage-based limit. If the specified loss or maximum drawdown is reached, it will automatically close all positions.</p>
                     </div>
                     
                     <div class="feature-card">
@@ -1312,10 +1354,9 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3>Strategy</h3>
-                        <p>The bot follows a trend-following strategy to trade with the market trends for profit.</p>
+                        <p>The first entry is based on trends. If the market moves against it, Martingale recovery begins.</p>
                     </div>
                         
-        
                 </div>
             </div>
         </section>
@@ -1335,7 +1376,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Our trading bot uses advanced algorithms to analyze market conditions, identify trading opportunities, and execute trades automatically based on predefined strategies. It monitors the market 24/5 and makes decisions based on technical indicators, price action, and market sentiment.</p>
+                            <p>The first entry is based on trends. If the market moves against it, Martingale recovery begins.</p>
                         </div>
                     </div>
                     
@@ -1345,7 +1386,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>The minimum deposit is $100, but we recommend starting with at least $500 to effectively implement risk management strategies. However, the bot is compatible with any account size, and we offer guidance on position sizing based on your account balance.</p>
+                            <p>The minimum for a standard account is 1 lakh USD, or for a cent account, it is 1 lakh USC.</p>
                         </div>
                     </div>
                     
@@ -1368,7 +1409,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Our bot currently works with FP Markets. We provide special integration with FP Markets and offer assistance with setup</p>
+                            <p>We recommend Market4You broker.</p>
                         </div>
                     </div>
                 </div>
@@ -1431,7 +1472,7 @@
                     Always trade responsibly and with funds you can afford to lose.</p>
         </div>
         <p style="font-size: 9px;">Caution: 
-This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn’t predict future results. The developer isn’t liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren’t guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn’t liable for changes.All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
+This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn't predict future results. The developer isn't liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren't guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn't liable for changes.All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
             
             
     </div>
@@ -1447,16 +1488,33 @@ This software/trading bot ('the Product') is provided 'as is' for informational 
     <script>
         let selectedOption = null;
         let selectedPaymentMethod = 'crypto';
+        let selectedPlan = 'basic';
         
-        // Set crypto as default active payment method
+        // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.payment-method').classList.add('payment-method-active');
-            document.getElementById('crypto-payment').classList.add('payment-details-active');
-            
             // Initialize copy buttons
             document.querySelectorAll('.copy-btn').forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     e.stopPropagation(); // Prevent triggering parent element clicks
+                });
+            });
+            
+            // Initialize FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const isOpen = this.classList.contains('active');
+                    // Close all other FAQ items
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.maxHeight = null;
+                    });
+                    // Open current if it was closed
+                    if (!isOpen) {
+                        this.classList.add('active');
+                        const answer = this.nextElementSibling;
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
                 });
             });
         });
@@ -1480,8 +1538,14 @@ This software/trading bot ('the Product') is provided 'as is' for informational 
             
             if (selectedOption === 1) {
                 document.getElementById('free-setup').classList.remove('hidden');
-            } else {
-                document.getElementById('purchase-option').classList.remove('hidden');
+            } else if (selectedOption === 2) {
+                document.getElementById('basic-purchase').classList.remove('hidden');
+                // Set crypto as default for basic
+                selectPaymentMethod(null, 'crypto', 'basic');
+            } else if (selectedOption === 3) {
+                document.getElementById('pro-purchase').classList.remove('hidden');
+                // Set crypto as default for pro
+                selectPaymentMethod(null, 'crypto', 'pro');
             }
         }
         
@@ -1492,19 +1556,41 @@ This software/trading bot ('the Product') is provided 'as is' for informational 
             document.getElementById('option-selection').classList.remove('hidden');
         }
         
-        function selectPaymentMethod(method) {
+        function selectPaymentMethod(event, method, plan = selectedPlan) {
             selectedPaymentMethod = method;
+            selectedPlan = plan;
             
-            // Update UI
-            document.querySelectorAll('.payment-method').forEach(el => {
+            // Get the current visible payment container (basic or pro)
+            const currentContainer = document.getElementById(`${plan}-purchase`);
+            
+            if (!currentContainer) return;
+            
+            // Remove active class from all payment methods in current container
+            currentContainer.querySelectorAll('.payment-method').forEach(el => {
                 el.classList.remove('payment-method-active');
             });
-            event.currentTarget.classList.add('payment-method-active');
             
-            document.querySelectorAll('.payment-details').forEach(el => {
+            // Hide all payment details in current container
+            currentContainer.querySelectorAll('.payment-details').forEach(el => {
                 el.classList.remove('payment-details-active');
             });
-            document.getElementById(`${method}-payment`).classList.add('payment-details-active');
+            
+            // If event exists (user clicked), add active class to clicked element
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('payment-method-active');
+            } else {
+                // Programmatically set the first payment method as active
+                const firstPaymentMethod = currentContainer.querySelector('.payment-method');
+                if (firstPaymentMethod) {
+                    firstPaymentMethod.classList.add('payment-method-active');
+                }
+            }
+            
+            // Show corresponding payment details
+            const paymentDetails = document.getElementById(`${method}-payment-${plan}`);
+            if (paymentDetails) {
+                paymentDetails.classList.add('payment-details-active');
+            }
         }
         
         function toggleMobileMenu() {
@@ -1528,9 +1614,10 @@ This software/trading bot ('the Product') is provided 'as is' for informational 
                 const successful = document.execCommand('copy');
                 if (successful) {
                     // Change button text temporarily
-                    button.textContent = 'Copied!';
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
                     setTimeout(() => {
-                        button.textContent = 'Copy';
+                        button.innerHTML = originalText;
                     }, 2000);
                 }
             } catch (err) {
@@ -1540,32 +1627,6 @@ This software/trading bot ('the Product') is provided 'as is' for informational 
             // Remove the textarea
             document.body.removeChild(textarea);
         }
-
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function () {
-                const isOpen = this.classList.contains('active');
-                faqQuestions.forEach(q => {
-                    q.classList.remove('active');
-                    q.nextElementSibling.style.maxHeight = null;
-                });
-                if (!isOpen) {
-                    this.classList.add('active');
-                    const answer = this.nextElementSibling;
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                }
-            });
-        });
-
-        
-
-
     </script>
-    
-    
 </body>
-
 </html>
-
-
