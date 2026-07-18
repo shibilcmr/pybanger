@@ -99,6 +99,13 @@
             color: var(--dark); text-decoration: none; font-weight: 600;
             padding: 0.75rem 1rem; border-radius: 8px; background: var(--primary-bg); font-size: 1rem;
         }
+        /* Home link: hidden by default, only shown via JS when scrolled away from top */
+        .mobile-menu a.home-link {
+            display: none;
+        }
+        .mobile-menu a.home-link.show {
+            display: block;
+        }
         .overlay {
             position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100;
             opacity: 0; visibility: hidden; transition: all 0.3s;
@@ -262,6 +269,7 @@
             </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
+            <a href="#top" id="homeLink" class="home-link" onclick="return goHome(event)">Home</a>
             <a href="#vps">Forex VPS</a>
             <a href="#services">Services</a>
             <a href="#why-us">Why Us</a>
@@ -271,7 +279,7 @@
         <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" id="top">
         <h1>Welcome to pybanger</h1>
         <p class="subline">We're a software development company.</p>
         <div class="service-tags">
@@ -491,14 +499,34 @@
             });
 
             const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
+            const homeLink = document.getElementById('homeLink');
+            const heroSection = document.getElementById('top');
+
+            function updateHomeLink() {
+                // Show "Home" only when the hero/home section is scrolled out of view
+                const heroBottom = heroSection.getBoundingClientRect().bottom;
+                if (heroBottom < 80) {
+                    homeLink.classList.add('show');
+                } else {
+                    homeLink.classList.remove('show');
+                }
+
                 if (window.scrollY > 10) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-            });
+            }
+
+            window.addEventListener('scroll', updateHomeLink);
+            updateHomeLink();
         });
+
+        function goHome(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        }
 
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
