@@ -3,60 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>pybanger - AI Trading Partner</title>
-    <meta name="description" content="pybanger EA for MT4: Advanced forex trading automation with 24/7 market analysis for precise trades and consistent profits.">
+    <title>pybanger - Custom Software Development & Automation</title>
+    <meta name="description" content="pybanger builds custom software, web applications, automation tools, trading systems, and VPS solutions for businesses and traders worldwide.">
     <meta name="theme-color" content="#0d0d0d">
-    <meta name="keywords" content="pybanger, algorithmic trading, forex bots, auto trading, mt5, mt4, trading software, pybanger, pybanger EA, pybanger bot">
-    <meta name="author" content="pybanger.com">
-
-    <meta property="og:image" content="https://pybanger.com/logo.jpg" />
-    <meta property="og:title" content="pybanger - AI Trading Partner" />
-    <meta property="og:description" content="pybanger EA for MT4: Advanced forex trading automation with 24/7 market analysis for precise trades and consistent profits." />
-    <meta property="og:url" content="https://pybanger.com/" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:image" content="https://pybanger.com/logo.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="pybanger - AI Trading Partner" />
-    <meta name="twitter:description" content="pybanger EA for MT4: Advanced forex trading automation with 24/7 market analysis for precise trades and consistent profits." />
-
     <link rel="canonical" href="https://pybanger.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="icon" href="https://pybanger.com/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="pybanger.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://pybanger.com/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://pybanger.com/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://pybanger.com/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://pybanger.com/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://pybanger.com/android-chrome-512x512.png">
 
-    <link rel="manifest" href="site.webmanifest">
-
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "pybanger",
-        "url": "https://pybanger.com",
-        "logo": "https://pybanger.com/logo.jpg",
-        "sameAs": [
-            "https://www.instagram.com/pybanger",
-            "https://www.youtube.com/@shibilcmr" 
-        ]
-        }
-    </script>
-  
     <style>
         :root {
             --primary: #4361ee;
             --primary-dark: #3a56d4;
             --primary-light: #4f6ef7;
-            --primary-bg: rgba(67, 97, 238, 0.1);
+            --primary-bg: rgba(67, 97, 238, 0.08);
             --dark: #111827;
             --darker: #0f172a;
             --light: #f9fafb;
@@ -64,59 +26,29 @@
             --gray: #6b7280;
             --light-gray: #e5e7eb;
             --success: #10b981;
-            --success-light: rgba(16, 185, 129, 0.1);
             --gold: #f59e0b;
-            --gold-light: rgba(245, 158, 11, 0.1);
-            --silver: #9ca3af;
-            --silver-light: rgba(156, 163, 175, 0.1);
-            --border-radius: 12px;
-            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s ease;
+            --border-radius: 14px;
+            --transition: all 0.25s ease;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            -webkit-font-smoothing: antialiased;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Manrope', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* ===== Navbar — sizes/shape matched to reference script ===== */
         .navbar {
             background: var(--lighter);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             padding: 1rem;
             position: sticky;
-            top: 0;
+            top: 0; left: 0; right: 0;
             z-index: 100;
             height: 70px;
-            flex-shrink: 0;
+            width: 100%;
             transition: all 0.3s ease;
         }
-        
-        .navbar.scrolled {
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
+        .navbar.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         .nav-container {
-            max-width: 1200px;
+            max-width: 1160px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -124,1282 +56,410 @@
             padding: 0 1rem;
             height: 100%;
         }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-        }
-        
+        .logo-container { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 1.1rem;
+            width: 40px; height: 40px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: 0 4px 6px rgba(79,70,229,0.1);
+            overflow: hidden; flex-shrink: 0;
         }
-        
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--darker);
-            letter-spacing: -0.5px;
-        }
-        
-        .logo-text span {
-            color: var(--primary);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-        
+        .logo-icon img { height: 40px; width: 40px; object-fit: contain; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: var(--darker); letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
         .nav-links a {
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-            position: relative;
+            color: var(--dark); text-decoration: none; font-weight: 500;
+            font-size: 0.95rem; position: relative; transition: color 0.2s;
         }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
+        .nav-links a:hover { color: var(--primary); }
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
+            background-color: var(--primary); transition: width 0.3s;
         }
-        
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--primary); color: white; padding: 0.6rem 1.2rem;
+            border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+            text-decoration: none; transition: var(--transition); margin-left: 0.5rem;
         }
-        
+        .nav-cta:hover { background: var(--primary-dark); }
         .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--dark);
-            padding: 0.5rem;
-            z-index: 101;
+            display: none; background: none; border: none; font-size: 1.8rem;
+            cursor: pointer; color: var(--dark); width: 44px; height: 44px;
+            align-items: center; justify-content: center; line-height: 1;
+            position: relative; z-index: 102; padding: 0.5rem;
         }
-        
         .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100vh;
-            background: var(--lighter);
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            z-index: 100;
-            padding: 5rem 1.5rem 1.5rem;
-            transition: transform 0.3s ease-out;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            position: fixed; top: 0; right: -300px; width: 300px; height: 100vh;
+            background: var(--lighter); box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 101; padding: 5rem 1.5rem 1.5rem; transition: right 0.3s ease-out;
+            display: flex; flex-direction: column; gap: 1rem;
         }
-        
-        .mobile-menu.active {
-            transform: translateX(-300px);
-        }
-        
+        .mobile-menu.active { right: 0; }
         .mobile-menu a {
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.75rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-            background: #f5f3ff;
+            color: var(--dark); text-decoration: none; font-weight: 600;
+            padding: 0.75rem 1rem; border-radius: 8px; background: var(--primary-bg); font-size: 1rem;
         }
-        
-        .mobile-menu a:hover {
-            background: #f5f3ff;
-            color: var(--primary);
-        }
-        
         .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 99;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
+            position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100;
+            opacity: 0; visibility: hidden; transition: all 0.3s;
         }
-        
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
+        .overlay.active { opacity: 1; visibility: visible; }
+        /* ===== End navbar ===== */
+
+        .container { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 5rem 1.5rem; }
+        .section-header { max-width: 640px; margin: 0 auto 3rem; text-align: center; }
+        .section-eyebrow {
+            display: inline-block; color: var(--primary); font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px; font-size: 0.78rem; margin-bottom: 0.6rem;
         }
-        
-        .container {
-            flex: 1;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem;
-            width: 100%;
-        }
-        
-        .section {
-            padding: 4rem 1.5rem;
-        }
-        
-        .section-header {
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        
-        .section-header.center {
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--darker);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        
-        .section-subtitle {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.875rem;
-        }
-        
-        .section-description {
-            color: var(--gray);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: left;
-        }
-        
-        header {
-            text-align: center;
-            margin: 1.5rem 0 3rem;
-            position: relative;
-        }
-        
-        .welcome-text {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--darker);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        
-        .tagline {
-            color: var(--gray);
-            font-size: 1.25rem;
-            font-weight: 500;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            line-height: 1.5;
-        }
-        
-        .highlight {
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .card {
-            background: var(--lighter);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2rem;
-            border: 1px solid var(--light-gray);
-            transition: var(--transition);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
-        
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--darker);
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-            letter-spacing: -0.25px;
-        }
-        
-        .card-subtitle {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-        
-        .option {
-            padding: 1.5rem;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--border-radius);
-            margin-bottom: 1rem;
-            transition: var(--transition);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .option:hover {
-            border-color: var(--primary-light);
-            box-shadow: 0 5px 15px -5px rgba(79,70,229,0.1);
-        }
-        
-        .option-selected {
-            border-color: var(--primary);
-            background-color: var(--primary-bg);
-        }
-        
-        .option-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-            color: var(--darker);
-            position: relative;
-            z-index: 2;
-        }
-        
-        .option-desc {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .price-tag {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0.5rem 1rem;
-            border-radius: 0 var(--border-radius) 0 var(--border-radius);
-            font-weight: 700;
-            font-size: 1rem;
-            z-index: 1;
-        }
-        
-        .price-tag.free {
-            background: linear-gradient(135deg, var(--success), #34d399);
-            color: white;
-        }
-        
-        .price-tag.basic {
-            background: linear-gradient(135deg, var(--silver), #9ca3af);
-            color: white;
-        }
-        
-        .price-tag.pro {
-            background: linear-gradient(135deg, var(--gold), #fbbf24);
-            color: white;
-        }
-        
+        .section-title { font-size: 2.1rem; font-weight: 800; color: var(--darker); letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+        .section-description { color: var(--gray); font-size: 1.05rem; }
+
+        .hero { text-align: center; padding: 5rem 1.5rem 4rem; max-width: 780px; margin: 0 auto; }
+        .hero h1 { font-size: 2.75rem; font-weight: 800; color: var(--darker); letter-spacing: -1px; line-height: 1.2; margin-bottom: 1.1rem; }
+        .hero .subline { color: var(--gray); font-size: 1.15rem; max-width: 620px; margin: 0 auto 1.75rem; }
+        .service-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 2.25rem; }
+        .service-tag { background: var(--primary-bg); color: var(--primary); font-weight: 600; font-size: 0.85rem; padding: 0.4rem 0.9rem; border-radius: 999px; }
+        .hero-buttons { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-align: center;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1.5rem;
-            letter-spacing: 0.2px;
-            gap: 0.5rem;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.9rem 1.7rem; border-radius: 10px; font-weight: 700; text-decoration: none;
+            font-size: 0.98rem; border: none; cursor: pointer; transition: var(--transition);
         }
-        
-        .btn-primary {
-            background: linear-gradient(to right, var(--primary), var(--primary-light));
-            color: white;
-            box-shadow: 0 4px 6px -1px rgba(79,70,229,0.2);
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(to right, var(--primary-dark), var(--primary));
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(79,70,229,0.3);
-        }
-        
-        .btn-outline {
-            background: white;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
-        
-        .btn-outline:hover {
-            background: #f5f3ff;
-            transform: translateY(-2px);
-        }
-        
-        .btn-sm {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
-            width: auto;
-            margin-top: 0;
-        }
-        
-        .step {
-            display: flex;
-            margin-bottom: 1.5rem;
-            align-items: flex-start;
-        }
-        
-        .step-number {
-            background: var(--primary);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            margin-right: 1rem;
-            flex-shrink: 0;
-            margin-top: 0.1rem;
-            font-weight: 600;
-        }
-        
-        .step-content {
-            flex: 1;
-            font-size: 1rem;
-        }
-        
-        .step-content strong {
-            color: var(--darker);
-            font-weight: 600;
-        }
-        
-        .payment-methods {
-            display: flex;
-            gap: 0.75rem;
-            margin: 1.5rem 0;
-        }
-        
-        .payment-method {
-            flex: 1;
-            text-align: center;
-            padding: 1rem 0.5rem;
-            border: 1px solid var(--light-gray);
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        .payment-method:hover, .payment-method-active {
-            border-color: var(--primary);
-            background: var(--primary-bg);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px -5px rgba(79,70,229,0.1);
-        }
-        
-        .payment-details {
-            display: none;
-            margin-top: 1.5rem;
-            animation: fadeIn 0.4s ease;
-        }
-        
-        .payment-details-active {
-            display: block;
-        }
-        
-        .payment-info {
-            background: var(--primary-bg);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-            word-break: break-all;
-            font-size: 0.95rem;
-            text-align: center;
-            border: 1px dashed var(--primary-light);
-            color: var(--darker);
-            position: relative;
-            padding-right: 100px;
-        }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 6px 16px -4px rgba(67,97,238,0.4); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-outline { background: white; color: var(--dark); border: 1px solid var(--light-gray); }
+        .btn-outline:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
 
-        .copy-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+        .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; gap: 1.5rem; text-align: center; }
+        .stat-num { font-size: 2rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 0.85rem; color: var(--gray); font-weight: 600; margin-top: 0.25rem; }
 
-        .copy-btn:hover {
-            background: var(--primary-dark);
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.25rem; }
+        .service-card { padding: 1.75rem; border: 1px solid var(--light-gray); border-radius: var(--border-radius); background: var(--lighter); transition: var(--transition); }
+        .service-card:hover { border-color: var(--primary-light); box-shadow: 0 12px 28px -12px rgba(67,97,238,0.2); transform: translateY(-3px); }
+        .service-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--primary-bg); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--darker); }
+        .service-card p { color: var(--gray); font-size: 0.92rem; margin-bottom: 0.75rem; }
+        .service-link { color: var(--primary); font-weight: 700; font-size: 0.85rem; text-decoration: none; }
+        .service-link:hover { text-decoration: underline; }
 
-        .copy-btn i {
-            font-size: 0.9rem;
-        }
-        
-        .payment-instructions {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .contact {
-            text-align: center;
-            margin-top: 3rem;
-            color: var(--gray);
-            font-size: 1rem;
-            padding-bottom: 2rem;
-        }
-        
-        .contact a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        .link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            word-break: break-all;
-            display: inline-block;
-            margin-top: 0.25rem;
-            transition: all 0.2s;
-        }
-        
-        .link:hover {
-            text-decoration: underline;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .vps-single { display: flex; justify-content: center; }
+        .vps-single .vps-card { max-width: 380px; width: 100%; }
+        .vps-card { background: var(--lighter); border: 1px solid var(--light-gray); border-radius: var(--border-radius); padding: 2rem 1.75rem; text-align: center; position: relative; transition: var(--transition); }
+        .vps-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -14px rgba(0,0,0,0.15); }
+        .vps-card.featured { border: 2px solid var(--primary); box-shadow: 0 14px 30px -14px rgba(67,97,238,0.35); }
+        .vps-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 999px; letter-spacing: 0.3px; }
+        .vps-name { font-weight: 700; color: var(--darker); font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .vps-features { list-style: none; text-align: left; margin-bottom: 1.5rem; }
+        .vps-features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--dark); padding: 0.4rem 0; }
+        .vps-features li i { color: var(--success); font-size: 0.85rem; }
 
-        .feature-card {
-            background-color: var(--lighter);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            text-align: center;
-            border: 1px solid var(--light-gray);
-        }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.25rem; }
+        .testimonial-card { background: var(--lighter); border: 1px solid var(--light-gray); border-radius: var(--border-radius); padding: 1.75rem; }
+        .stars { color: var(--gold); letter-spacing: 2px; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        .testimonial-text { color: var(--dark); font-size: 0.95rem; margin-bottom: 1rem; font-style: italic; }
+        .testimonial-author { color: var(--gray); font-size: 0.85rem; font-weight: 600; }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1.25rem; }
+        .why-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem; }
+        .why-item i { color: var(--primary); font-size: 1.2rem; margin-top: 0.15rem; }
+        .why-item h4 { font-size: 1rem; color: var(--darker); margin-bottom: 0.25rem; }
+        .why-item p { font-size: 0.88rem; color: var(--gray); }
 
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background-color: var(--primary-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary);
-        }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 1.5rem; }
+        .process-step { text-align: center; padding: 1rem; }
+        .process-step .num { width: 42px; height: 42px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem; }
+        .process-step h4 { color: var(--darker); margin-bottom: 0.4rem; font-size: 1rem; }
+        .process-step p { color: var(--gray); font-size: 0.88rem; }
 
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
+        .faq-grid { max-width: 760px; margin: 0 auto; }
+        .faq-item { margin-bottom: 0.75rem; border-radius: 10px; overflow: hidden; background: var(--lighter); border: 1px solid var(--light-gray); }
+        .faq-question { width: 100%; padding: 1.1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; font-size: 0.98rem; font-weight: 600; color: var(--darker); }
+        .faq-question i { transition: var(--transition); color: var(--gray); }
+        .faq-question.active i { transform: rotate(180deg); color: var(--primary); }
+        .faq-answer { padding: 0 1.25rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-answer p { padding: 0 0 1.1rem; color: var(--gray); font-size: 0.92rem; }
 
-        .feature-card p {
-            color: var(--gray);
-            font-size: 1rem;
-            line-height: 1.6;
-            text-align: left;
-        }
+        .cta-section { background: var(--darker); border-radius: 20px; max-width: 1000px; margin: 0 auto; padding: 3.5rem 2rem; text-align: center; color: white; }
+        .cta-section h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-section p { color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 2rem; }
+        .cta-contacts { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; margin-top: 2rem; }
+        .cta-contact { display: flex; align-items: center; gap: 0.6rem; color: white; text-decoration: none; font-weight: 600; font-size: 0.92rem; opacity: 0.85; }
+        .cta-contact:hover { opacity: 1; color: var(--primary-light); }
 
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .footer { background: var(--darker); color: rgba(255,255,255,0.85); padding: 3rem 1.5rem 0; margin-top: 4rem; }
+        .footer-inner { max-width: 1160px; margin: 0 auto; }
+        .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding-bottom: 2.5rem; }
+        .footer-brand { max-width: 320px; }
+        .footer-brand .logo-text { color: white; }
+        .footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 0.75rem; }
+        .footer-links-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem; color: rgba(255,255,255,0.5); }
+        .footer-links-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .footer-links-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem; }
+        .footer-links-col a:hover { color: var(--primary-light); }
+        .footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
+        .risk-warning { border-top: 1px solid rgba(255,255,255,0.1); padding: 1.75rem 0; }
+        .risk-warning p { font-size: 0.7rem; line-height: 1.6; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+        .footer-bottom { padding: 1.25rem 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: rgba(255,255,255,0.5); flex-wrap: wrap; gap: 0.5rem; }
+        .footer-legal { display: flex; gap: 1.25rem; }
+        .footer-legal a { color: rgba(255,255,255,0.5); text-decoration: none; }
+        .footer-legal a:hover { color: white; }
 
-        .faq-item {
-            margin-bottom: 1rem;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            background-color: var(--lighter);
-            border: 1px solid var(--light-gray);
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 1.25rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--lighter);
-            border: none;
-            cursor: pointer;
-            text-align: left;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--darker);
-            transition: var(--transition);
-        }
-
-        .faq-question:hover {
-            background-color: var(--light);
-        }
-
-        .faq-question i {
-            transition: var(--transition);
-        }
-
-        .faq-question.active i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding: 0 1.25rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .faq-answer p {
-            padding: 0 0 1.25rem;
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            padding-right: 0;
-        }
-
-        .contact-methods {
-            margin: 2rem 0;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item i {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        .contact-item h4 {
-            font-size: 1.125rem;
-            margin-bottom: 0.25rem;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        .contact-item a {
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--primary-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.125rem;
-            transition: var(--transition);
-        }
-
-        .social-icon:hover {
-            background-color: var(--primary);
-            color: var(--lighter);
-            transform: translateY(-3px);
-        }
-
-        .testimonials {
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: var(--lighter);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2rem;
-            border: 1px solid var(--light-gray);
-        }
-
-        .testimonial-content {
-            font-style: italic;
-            color: var(--gray);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
-
-        .author-info h4 {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .author-info p {
-            color: var(--gray);
-            font-size: 0.875rem;
-        }
-
-        .footer {
-            text-align: center;
-            font-size: 0.6875rem;
-            color: var(--text-muted);
-            padding: 0.75rem;
-            border-top: 1px solid var(--border);
-            flex-shrink: 0;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.125rem;
-            margin-bottom: 1.25rem;
-            position: relative;
-            padding-bottom: 0.75rem;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--primary);
-        }
-
-        .footer-column p {
-            opacity: 0.7;
-            margin-bottom: 1.25rem;
-            font-size: 0.875rem;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: var(--white);
-            opacity: 0.7;
-            font-size: 0.875rem;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-            color: var(--primary);
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 0.75rem;
-            margin-top: 1.25rem;
-        }
-
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            transition: var(--transition);
-            font-size: 0.875rem;
-        }
-
-        .footer-social a:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            padding: 1.5rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.75rem;
-            opacity: 0.7;
-        }
-
-        .footer-legal {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-legal a {
-            color: var(--white);
-            transition: var(--transition);
-        }
-
-        .footer-legal a:hover {
-            color: var(--primary);
-        }
-
-        .copyright {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.875rem;
-        }
-
-        .risk-warning {
-            background: rgba(255,255,255,0.05);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-            text-align: left;
-        }
-
-        .risk-warning h3 {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary-light);
-        }
-
-        .risk-warning p {
-            font-size: 0.75rem;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 0.5rem;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 90;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @media (max-width: 1024px) {
-            .section {
-                padding: 3rem 1.5rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
+        @media (max-width: 1024px) { .hero h1 { font-size: 2.4rem; } }
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .container {
-                padding: 1.25rem;
-            }
-            .welcome-text {
-                font-size: 2rem;
-            }
-            .tagline {
-                font-size: 1.1rem;
-            }
-            .card {
-                padding: 1.5rem;
-            }
-            .option {
-                padding: 1.25rem 1rem 1.25rem 1.25rem;
-            }
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            .contact-info {
-                padding-right: 0;
-            }
+            .nav-links, .nav-cta { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .hero { padding: 3.5rem 1.25rem 3rem; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero .subline { font-size: 1rem; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .hero-buttons .btn { width: 100%; }
+            .section { padding: 3rem 1.25rem; }
+            .section-title { font-size: 1.6rem; }
+            .section-header { margin-bottom: 2rem; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 1.5rem 1rem; gap: 1.25rem; }
+            .stat-num { font-size: 1.6rem; }
+            .cta-section { padding: 2.5rem 1.5rem; border-radius: 14px; }
+            .cta-section h2 { font-size: 1.5rem; }
+            .cta-contacts { flex-direction: column; gap: 1rem; align-items: center; }
+            .footer-top { flex-direction: column; }
+            .footer-cols { gap: 2rem; }
+            .vps-single .vps-card { max-width: 100%; }
         }
-        
         @media (max-width: 480px) {
-            .welcome-text {
-                font-size: 1.8rem;
-            }
-            .tagline {
-                font-size: 1rem;
-            }
-            .card-title {
-                font-size: 1.3rem;
-            }
-            .btn {
-                padding: 0.9rem;
-                font-size: 0.95rem;
-            }
-            .section-title {
-                font-size: 1.75rem;
-            }
-            .section-description {
-                font-size: 1rem;
-            }
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .logo-text { font-size: 1.3rem; }
+            .logo-icon, .logo-icon img { width: 36px; height: 36px; }
+            .hero h1 { font-size: 1.6rem; }
+            .btn { padding: 0.85rem 1.4rem; font-size: 0.92rem; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .stat-num { font-size: 1.4rem; }
+            .vps-card { padding: 1.5rem 1.25rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-container">
                 <div class="logo-icon">
-                    <img src="https://pybanger.com/logo.jpg" alt="Logo" style="height: 40px;">
+                    <img src="https://pybanger.com/logo.jpg" alt="pybanger logo">
                 </div>
-                <div class="logo-text">pybanger<span></span></div>
+                <div class="logo-text">pybanger</div>
             </div>
             <div class="nav-links">
-                <a href="https://pybanger.com/">Home</a>
-                <a href="#features">About</a>
+                <a href="#vps">Forex VPS</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <a href="https://wa.me/919207119319" class="nav-cta">Start a Project</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars" id="mobileMenuIcon"></i>
+            </button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <a href="https://pybanger.com/" onclick="toggleMobileMenu()">Home</a>
-            <a href="#features" onclick="toggleMobileMenu()">About</a>
-            <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
-            <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+            <a href="#vps">Forex VPS</a>
+            <a href="#services">Services</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="overlay" id="overlay" onclick="toggleMobileMenu()"></div>
     </nav>
-    
+
+    <header class="hero">
+        <h1>Welcome to pybanger</h1>
+        <p class="subline">We're a software development company.</p>
+        <div class="service-tags">
+            <span class="service-tag">Custom Software</span>
+            <span class="service-tag">Web Development</span>
+            <span class="service-tag">MT4 & MT5 Bot Development</span>
+            <span class="service-tag">Forex VPS</span>
+        </div>
+        <div class="hero-buttons">
+            <a href="https://wa.me/919207119319" class="btn btn-primary">Start Your Project</a>
+            <a href="#services" class="btn btn-outline">Explore Our Services</a>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <div class="welcome-text">Welcome to pybanger</div>
-            <div class="tagline">Start Smart Trading</div>
-        </header>
-        
-        <!-- Option Selection (Only Basic and Pro) -->
-        <div class="card" id="option-selection">
-            <h2 class="card-title">Select your plan</h2>
-           
-            <div class="option" onclick="selectOption(2)">
-                <div class="price-tag basic">$249</div>
-                <div class="option-title">pyzar EA </div>
-                <div class="option-desc">Receive the complete .ex5 bot file with full usage rights for your trading </div>
-            </div>
-            
-            <div class="option" onclick="selectOption(3)">
-                <div class="price-tag pro">$399</div>
-                <div class="option-title">pymart EA</div>
-                <div class="option-desc">Receive the complete .ex5 bot file with full usage rights for your trading </div>
-            </div>
-            
-            <button class="btn btn-primary" onclick="proceedToNextStep()">Continue →</button>
+        <div class="stats-bar">
+            <div><div class="stat-num">1000+</div><div class="stat-label">Projects Delivered</div></div>
+            <div><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+            <div><div class="stat-num">★ 5.0</div><div class="stat-label">Client Satisfaction</div></div>
+            <div><div class="stat-num">24/5</div><div class="stat-label">Support</div></div>
         </div>
-        
-        <!-- Free Setup Option (Removed) -->
-
-        <!-- Basic Purchase Option -->
-        <div class="card hidden" id="basic-purchase">
-            <h2 class="card-title">Complete Your Purchase</h2>
-            <p class="card-subtitle">$249 - pybanger EA Basic Lifetime License</p>
-            
-            <div class="payment-methods">
-                <div class="payment-method payment-method-active" onclick="selectPaymentMethod(event, 'crypto', 'basic')">
-                    USDT (Crypto)
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(event, 'binance', 'basic')">
-                    Binance Pay
-                </div>
-            </div>
-            
-            <div class="payment-details payment-details-active" id="crypto-payment-basic">
-                <div class="payment-info">
-                    TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM
-                    <button class="copy-btn" onclick="copyToClipboard('TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM', this)">Copy</button>
-                </div>
-                <div class="payment-instructions">
-                    Send <strong>exactly $249 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
-                </div>
-                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
-            </div>
-
-            <div class="payment-details" id="binance-payment-basic">
-                <div class="payment-info">
-                    40746822
-                    <button class="copy-btn" onclick="copyToClipboard('40746822', this)">Copy</button>
-                </div>
-                <div class="payment-instructions">
-                    1. Open your Binance mobile app<br>
-                    2. Navigate to "Send" and enter recipient ID<br>
-                    3. Transfer $249 equivalent<br>
-                    4. Send payment confirmation to @pybanger
-                </div>
-                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
-            </div>
-            
-            <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
-        </div>
-
-        <!-- Pro Purchase Option -->
-        <div class="card hidden" id="pro-purchase">
-            <h2 class="card-title">Complete Your Purchase</h2>
-            <p class="card-subtitle">$399 - pybanger EA Pro Lifetime License</p>
-            
-            <div class="payment-methods">
-                <div class="payment-method payment-method-active" onclick="selectPaymentMethod(event, 'crypto', 'pro')">
-                    USDT (Crypto)
-                </div>
-                <div class="payment-method" onclick="selectPaymentMethod(event, 'binance', 'pro')">
-                    Binance Pay
-                </div>
-            </div>
-            
-            <div class="payment-details payment-details-active" id="crypto-payment-pro">
-                <div class="payment-info">
-                    TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM
-                    <button class="copy-btn" onclick="copyToClipboard('TCXEbcpqrdsZEYTiXEyzFTU8xg8uVq4nLM', this)">Copy</button>
-                </div>
-                <div class="payment-instructions">
-                    Send <strong>exactly $399 worth of USDT</strong> via TRC20 network only. Transaction fees must be covered separately. After payment, please forward the transaction ID to @pybanger on Telegram for verification.
-                </div>
-                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
-            </div>
-
-            <div class="payment-details" id="binance-payment-pro">
-                <div class="payment-info">
-                    40746822
-                    <button class="copy-btn" onclick="copyToClipboard('40746822', this)">Copy</button>
-                </div>
-                <div class="payment-instructions">
-                    1. Open your Binance mobile app<br>
-                    2. Navigate to "Send" and enter recipient ID<br>
-                    3. Transfer $399 equivalent<br>
-                    4. Send payment confirmation to @pybanger
-                </div>
-                <button class="btn btn-primary" onclick="window.location.href='https://t.me/pybanger'">Payment Completed</button>
-            </div>
-            
-            <button class="btn btn-outline" onclick="backToOptions()">← Back to options</button>
-        </div>
-
-        <section class="section" id="features">
-            <div class="container">
-                <div class="section-header center">
-                    <h2 class="section-title">Why Choose Us</h2>
-                    <p class="section-description">We deliver premium automated trading solutions built for high performance and strict consistency. Our clean, professional algorithms remove human emotion from the markets, giving you institutional-grade execution 24/7.</p>
-                </div>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Advanced Algorithm</h3>
-                        <p>This bot is trend-based and has a smart trading algorithm. It activates Martingale when needed. Even with Martingale on, it keeps taking trend entries for quick recovery. The exit strategies help reduce losses when the market changes.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Risk Protection</h3>
-                        <p>This bot has risk protection features. You can set a dollar-based drawdown limit and a percentage-based limit. If the specified loss or maximum drawdown is reached, it will automatically close all positions.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Strategy</h3>
-                        <p>The first entry is based on trends. If the market moves against it, Martingale recovery begins.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="faq">
-            <div class="container">
-                <div class="section-header center">
-                    <span class="section-subtitle">Support</span>
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                </div>
-                
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>How does the trading bot work?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>The first entry is based on trends. If the market moves against it, Martingale recovery begins.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What's the minimum account size needed?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>For pyzar ea, you only need a minimum deposit of $100 to get started. For pymart ea, the minimum required deposit is $250, and it must be set up on a Cent Account.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Do I need trading experience to use this?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>No prior trading experience is necessary. Our bot is designed to work autonomously, and we provide complete setup instructions and ongoing support. However, basic understanding of forex trading concepts will help you better customize the bot to your preferences.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>What brokers do you support?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>We recommend Market4You broker.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <span class="section-subtitle">Contact Us</span>
-                        <h2 class="section-title">Get In Touch</h2>
-                        <p>Have questions or need assistance? Our support team is ready to help with any inquiries about our products and services.</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email Us</h4>
-                                    <a href="mailto:support@pybanger.com">pybanger@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <i class="fab fa-telegram"></i>
-                                <div>
-                                    <h4>Telegram</h4>
-                                    <a href="https://t.me/pybanger">@pybanger</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <div>
-                                    <h4>WhatsApp</h4>
-                                    <a href="https://wa.me/+919207119319">+919207119319</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="contact">
-            Need assistance? <a href="https://t.me/pybanger" target="_blank">Contact our support</a>
-        </div>
-
-        <div class="footer-column" style="list-style: none; padding-left: 0;">
-            <h3 style="font-size: 10px;">Risk warning</h3>
-            <p style="font-size: 9px;">Risk Warning
-            Trading foreign exchange (Forex) involves a high level of risk and may not be suitable for all users. Leverage can amplify both gains and losses. Before using any automated tools or trading software, you should carefully assess your financial goals, trading experience, and risk tolerance.
-            Always trade responsibly and with funds you can afford to lose.</p>
-        </div>
-        <p style="font-size: 9px;">Caution: 
-        This software/trading bot ('the Product') is provided 'as is' for informational and educational use only. It is not financial/investment advice or a trading recommendation. Trading in forex, stocks, crypto, etc., carries high risk; you may lose all capital. Past performance doesn't predict future results. The developer isn't liable for losses or consequences. Users are responsible for their decisions; test in demo, seek advice. Accuracy, reliability aren't guaranteed; bugs, broker policies may affect performance. Not endorsed by brokers or authorities. Legal responsibility lies with users. Use at your own risk; developer isn't liable for changes. All content on this site is for educational and informational purposes only. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy.</p>
     </div>
 
+    <section class="section" id="vps" style="background:var(--lighter);">
+        <div class="section-header">
+            <span class="section-eyebrow">Our Product</span>
+            <h2 class="section-title">Forex VPS</h2>
+            <p class="section-description">A fast, stable VPS made for MT4 and MT5. Ready today.</p>
+        </div>
+        <div class="vps-single">
+            <div class="vps-card featured">
+                <div class="vps-badge">Ready to Use</div>
+                <div class="vps-name">Forex VPS Plan</div>
+                <ul class="vps-features">
+                    <li><i class="fas fa-check"></i> Intel Xeon E3532 CPU</li>
+                    <li><i class="fas fa-check"></i> 2 CPU Cores</li>
+                    <li><i class="fas fa-check"></i> 4 GB RAM</li>
+                    <li><i class="fas fa-check"></i> 25 GB NVMe SSD</li>
+                    <li><i class="fas fa-check"></i> Windows Server</li>
+                    <li><i class="fas fa-check"></i> Works with MT4 & MT5</li>
+                    <li><i class="fas fa-check"></i> Runs 24 hours, every day</li>
+                </ul>
+                <a href="https://wa.me/919207119319" class="btn btn-primary">Buy VPS on WhatsApp</a>
+            </div>
+        </div>
+        <p style="text-align:center;color:var(--gray);font-size:0.85rem;margin-top:1.5rem;">Message us on WhatsApp. We set it up fast, same day.</p>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-header">
+            <span class="section-eyebrow">What We Do</span>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-description">We build reliable software and digital solutions for businesses and traders.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>MT4 & MT5 Bot Development</h3>
+                <p>Custom trading bots, indicators, and automation for MetaTrader.</p>
+                <a href="https://wa.me/919207119319" class="service-link">Get Started</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-server"></i></div>
+                <h3>Forex VPS</h3>
+                <p>Fast, reliable Windows VPS optimized for 24/7 MT4 & MT5 trading.</p>
+                <a href="#vps" class="service-link">Buy VPS</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Custom Software</h3>
+                <p>Custom desktop and business software built to fit your needs.</p>
+                <a href="https://wa.me/919207119319" class="service-link">Get Started</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive websites and web applications.</p>
+                <a href="https://wa.me/919207119319" class="service-link">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="why-us" style="background:var(--lighter);">
+        <div class="section-header">
+            <span class="section-eyebrow">Why pybanger</span>
+            <h2 class="section-title">Why Choose Us</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-item"><i class="fas fa-check-circle"></i><div><h4>Quality Works</h4><p>Built to last.</p></div></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><div><h4>Fast Delivery</h4><p>Most projects are completed in days, not months.</p></div></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><div><h4>Direct Communication</h4><p>Work directly with our developers.</p></div></div>
+            <div class="why-item"><i class="fas fa-check-circle"></i><div><h4>Ongoing Support</h4><p>We're here even after delivery.</p></div></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <span class="section-eyebrow">How It Works</span>
+            <h2 class="section-title">Simple Steps</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step"><div class="num">1</div><h4>Message Us</h4><p>Tell us what you need.</p></div>
+            <div class="process-step"><div class="num">2</div><h4>Get a Price</h4><p>We tell you cost and time.</p></div>
+            <div class="process-step"><div class="num">3</div><h4>We Build It</h4><p>We build, test, and keep you updated.</p></div>
+            <div class="process-step"><div class="num">4</div><h4>You Get It</h4><p>You get it done, plus help after too.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <span class="section-eyebrow">Client Feedback</span>
+            <h2 class="section-title">What Clients Say</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">Our trading bot was ready in four days. It worked great from day one.</p><div class="testimonial-author">— James, London</div></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">VPS was ready same day. No downtime since we started using it.</p><div class="testimonial-author">— Ahmed, Dubai</div></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p class="testimonial-text">New website was done in two weeks. We get more customers now.</p><div class="testimonial-author">— Priya, India</div></div>
+        </div>
+    </section>
+
+    <section class="section" id="faq" style="background:var(--lighter);">
+        <div class="section-header">
+            <span class="section-eyebrow">Support</span>
+            <h2 class="section-title">Common Questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item"><button class="faq-question"><span>What services do you offer?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>We develop custom software, websites, MT4 & MT5 trading bots, and provide Forex VPS hosting.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>How long does development take?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Most projects are completed within a few days to a few weeks, depending on the complexity.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>Do you develop custom MT4 & MT5 bots?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes. We build custom MT4 & MT5 trading bots based on your trading strategy.</p></div></div>
+            <div class="faq-item"><button class="faq-question"><span>Do you provide support after delivery?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Yes. We provide post-delivery support and bug fixes for completed projects.</p></div></div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="cta-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Tell us what you need.</p>
+            <a href="https://wa.me/919207119319" class="btn btn-primary">Contact Us</a>
+            <div class="cta-contacts">
+                <a href="mailto:support@pybanger.com" class="cta-contact"><i class="fas fa-envelope"></i> pybanger@gmail.com</a>
+                <a href="https://wa.me/919207119319" class="cta-contact"><i class="fab fa-whatsapp"></i> +91 92071 19319</a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
-        © 2025 pybanger | <a href="terms-conditions.html">Terms</a> | <a href="privacy-policy.html">Privacy</a>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo-text">pybanger</div>
+                    <p>We build software, websites, and trading bots. We also sell fast Forex VPS.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-links-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Software Engineering</a></li>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Trading Automation</a></li>
+                            <li><a href="#services">VPS Hosting</a></li>
+                            <li><a href="#services">System Integrations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#why-us">Why Us</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="risk-warning">
+                <p>Trading foreign exchange (Forex) involves a high level of risk and may not be suitable for all users. Leverage can amplify both gains and losses. Automation tools developed by pybanger are provided "as is" for informational and educational purposes and are not financial or investment advice. Past performance doesn't predict future results. Users are responsible for their own trading decisions and should trade only with funds they can afford to lose.</p>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2025 pybanger. All rights reserved.</div>
+                <div class="footer-legal">
+                    <a href="terms-conditions.html">Terms</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        let selectedOption = null;
-        let selectedPaymentMethod = 'crypto';
-        let selectedPlan = 'basic';
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.copy-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                });
-            });
-            
+        document.addEventListener('DOMContentLoaded', function () {
             const faqQuestions = document.querySelectorAll('.faq-question');
             faqQuestions.forEach(question => {
                 question.addEventListener('click', function () {
@@ -1415,101 +475,47 @@
                     }
                 });
             });
-        });
-        
-        function selectOption(option) {
-            document.querySelectorAll('.option').forEach(el => {
-                el.classList.remove('option-selected');
+
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (document.getElementById('mobileMenu').classList.contains('active')) {
+                        toggleMobileMenu();
+                    }
+                });
             });
-            
-            event.currentTarget.classList.add('option-selected');
-            selectedOption = option;
-        }
-        
-        function proceedToNextStep() {
-            if (!selectedOption) {
-                alert('Please select an option first');
-                return;
-            }
-            
-            document.getElementById('option-selection').classList.add('hidden');
-            
-            // Only options 2 and 3 remain
-            if (selectedOption === 2) {
-                document.getElementById('basic-purchase').classList.remove('hidden');
-                selectPaymentMethod(null, 'crypto', 'basic');
-            } else if (selectedOption === 3) {
-                document.getElementById('pro-purchase').classList.remove('hidden');
-                selectPaymentMethod(null, 'crypto', 'pro');
-            }
-        }
-        
-        function backToOptions() {
-            document.querySelectorAll('.card').forEach(el => {
-                el.classList.add('hidden');
-            });
-            document.getElementById('option-selection').classList.remove('hidden');
-        }
-        
-        function selectPaymentMethod(event, method, plan = selectedPlan) {
-            selectedPaymentMethod = method;
-            selectedPlan = plan;
-            
-            const currentContainer = document.getElementById(`${plan}-purchase`);
-            if (!currentContainer) return;
-            
-            currentContainer.querySelectorAll('.payment-method').forEach(el => {
-                el.classList.remove('payment-method-active');
-            });
-            
-            currentContainer.querySelectorAll('.payment-details').forEach(el => {
-                el.classList.remove('payment-details-active');
-            });
-            
-            if (event && event.currentTarget) {
-                event.currentTarget.classList.add('payment-method-active');
-            } else {
-                const firstPaymentMethod = currentContainer.querySelector('.payment-method');
-                if (firstPaymentMethod) {
-                    firstPaymentMethod.classList.add('payment-method-active');
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && document.getElementById('mobileMenu').classList.contains('active')) {
+                    toggleMobileMenu();
                 }
-            }
-            
-            const paymentDetails = document.getElementById(`${method}-payment-${plan}`);
-            if (paymentDetails) {
-                paymentDetails.classList.add('payment-details-active');
-            }
-        }
-        
+            });
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             const overlay = document.getElementById('overlay');
-            mobileMenu.classList.toggle('active');
+            const btn = document.getElementById('mobileMenuBtn');
+            const icon = document.getElementById('mobileMenuIcon');
+            const isOpen = mobileMenu.classList.toggle('active');
             overlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-        }
-
-        function copyToClipboard(text, button) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            document.body.appendChild(textarea);
-            textarea.select();
-            
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    const originalText = button.innerHTML;
-                    button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                    setTimeout(() => {
-                        button.innerHTML = originalText;
-                    }, 2000);
-                }
-            } catch (err) {
-                console.error('Failed to copy text: ', err);
+            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+            btn.setAttribute('aria-expanded', isOpen);
+            if (isOpen) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
-            
-            document.body.removeChild(textarea);
         }
     </script>
 </body>
