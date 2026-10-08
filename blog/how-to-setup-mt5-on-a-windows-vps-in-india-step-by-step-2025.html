@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+<title>How to Setup MT5 on a Windows VPS in India (Step by Step 2025) | pybanger</title>
+<meta name="description" content="Step by step guide to setup MT5 on a Windows VPS in India. Install MT5, add EAs, enable auto trading and pick the right VPS location for your broker.">
+<link rel="canonical" href="https://pybanger.com/blog/how-to-setup-mt5-on-a-windows-vps-in-india-step-by-step-2025.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="pybanger">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Setup MT5 on a Windows VPS in India (Step by Step 2025)">
+<meta property="og:description" content="Step by step guide to setup MT5 on a Windows VPS in India. Install MT5, add EAs, enable auto trading and pick the right VPS location for your broker.">
+<meta property="og:url" content="https://pybanger.com/blog/how-to-setup-mt5-on-a-windows-vps-in-india-step-by-step-2025.html">
+<meta property="og:site_name" content="pybanger">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+  :root {
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --navy: #0f172a;
+    --gray-700: #334155;
+    --gray-600: #475569;
+    --gray-500: #64748b;
+    --gray-400: #94a3b8;
+    --gray-300: #cbd5e1;
+    --gray-200: #e2e8f0;
+    --gray-100: #f1f5f9;
+    --gray-50: #f8fafc;
+    --white: #ffffff;
+    --whatsapp: #25D366;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--gray-600);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  /* NAVBAR */
+  .navbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .navbar-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .logo-mark {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .logo-square {
+    width: 24px;
+    height: 24px;
+    background: #2563eb;
+  }
+
+  .logo-text {
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -1.4px;
+    color: #000;
+    line-height: 1;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  .back-link:hover {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+  }
+
+  .back-link i { font-size: 0.85rem; }
+
+  /* BLOG HEADER */
+  .blog-header {
+    padding: 56px 0 32px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .blog-header h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    flex-wrap: wrap;
+  }
+
+  .blog-meta i { color: var(--blue); margin-right: 6px; }
+
+  /* BLOG CONTENT */
+  .blog-content {
+    padding: 40px 0 60px;
+  }
+
+  .blog-content h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.6px;
+    margin: 36px 0 16px;
+    line-height: 1.3;
+  }
+
+  .blog-content h2:first-child { margin-top: 0; }
+
+  .blog-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+    margin: 28px 0 12px;
+  }
+
+  .blog-content p {
+    font-size: 1.02rem;
+    color: var(--gray-600);
+    margin-bottom: 18px;
+    line-height: 1.8;
+  }
+
+  .blog-content ul {
+    list-style: none;
+    margin: 16px 0 24px;
+    padding: 0;
+  }
+
+  .blog-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .blog-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    background: var(--blue);
+    border-radius: 2px;
+  }
+
+  .blog-content strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  /* CTA BOX */
+  .blog-cta {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--blue);
+    border-radius: 8px;
+    padding: 28px 24px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .blog-cta p {
+    font-size: 1.05rem;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .btn-order {
+    background: var(--blue);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+
+  .btn-order:hover { background: var(--blue-dark); }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 0 32px;
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--gray-200);
+    background: var(--gray-50);
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .footer-logo .logo-square {
+    width: 14px;
+    height: 14px;
+  }
+
+  .footer-logo .logo-text {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+  }
+
+  .footer-copyright {
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    padding-top: 14px;
+    border-top: 1px solid var(--gray-200);
+    line-height: 1.6;
+  }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: var(--whatsapp);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: transform 0.2s;
+  }
+
+  .whatsapp-float:hover { transform: scale(1.08); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .navbar { padding: 14px 0; }
+    .logo-text { font-size: 1.8rem; letter-spacing: -1.1px; }
+    .logo-square { width: 18px; height: 18px; }
+
+    .back-link {
+      font-size: 0.82rem;
+      padding: 7px 12px;
+    }
+
+    .container { padding: 0 20px; }
+
+    .blog-header { padding: 40px 0 24px; }
+    .blog-header h1 { font-size: 1.75rem; letter-spacing: -0.8px; }
+
+    .blog-content h2 { font-size: 1.35rem; margin: 28px 0 12px; }
+    .blog-content h3 { font-size: 1.15rem; }
+    .blog-content p { font-size: 0.98rem; }
+    .blog-content ul li { font-size: 0.96rem; }
+
+    .blog-cta { padding: 24px 20px; margin: 32px 0; }
+    .blog-cta p { font-size: 1rem; }
+
+    .footer-logo .logo-text { font-size: 1.6rem; }
+    .footer-logo .logo-square { width: 12px; height: 12px; }
+
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      width: 52px;
+      height: 52px;
+      font-size: 1.45rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-text { font-size: 1.6rem; letter-spacing: -0.9px; }
+    .logo-square { width: 15px; height: 15px; }
+
+    .back-link { font-size: 0.75rem; padding: 6px 10px; }
+    .back-link span { display: none; }
+
+    .blog-header h1 { font-size: 1.5rem; }
+    .blog-content h2 { font-size: 1.25rem; }
+    .blog-content p { font-size: 0.94rem; }
+
+    .btn-order { padding: 12px 22px; font-size: 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="https://pybanger.com" class="logo">
+      <span class="logo-mark">
+        <span class="logo-square"></span>
+        <span class="logo-square"></span>
+      </span>
+      <span class="logo-text">pybanger</span>
+    </a>
+    <a href="https://pybanger.com" class="back-link">
+      <i class="fas fa-arrow-left"></i>
+      <span>Go to pybanger.com</span>
+    </a>
+  </div>
+</nav>
+
+<article>
+  <header class="blog-header">
+    <div class="container">
+      <h1>How to Setup MT5 on a Windows VPS in India (Step by Step 2025)</h1>
+      <div class="blog-meta">
+        <span><i class="fas fa-calendar"></i>8 October 2026</span>
+        <span><i class="fas fa-user"></i>pybanger</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="blog-content">
+    <div class="container">
+      <h2>How to Setup MT5 on a Windows VPS in India</h2>
+<p>Running MT5 on your home computer works until it does not. A power cut, an internet drop or a Windows update can close your terminal during a live trade. If you run Expert Advisors, this means missed entries and losses you cannot recover.</p>
+<p>This guide shows you exactly how to setup MT5 on a Windows VPS in India. By the end you will have MT5 running 24 hours a day on a server that never sleeps.</p>
+<h2>What You Need Before You Start</h2>
+<p>You need three things before you begin.</p>
+<p>A Windows VPS from a provider that supports MT4 and MT5. In India, popular options include pybanger starting at 999 rupees per month, Webyne starting at 599 rupees per month and VCCLHosting starting at 539 rupees per month. All three offer Windows VPS with full admin access.</p>
+<p>Your MT5 login details from your broker. This is your account number, password and server name. You can find these in your broker welcome email or inside the MT5 terminal on your home computer.</p>
+<p>Your EA files if you use Expert Advisors. These are the .ex5 files you downloaded from MQL5 market or received from your EA developer.</p>
+<h2>Step 1 Connect to Your Windows VPS</h2>
+<p>When you order a Windows VPS from providers like pybanger, Webyne or VCCLHosting, you receive an IP address, username and password via email or WhatsApp.</p>
+<p>On your Windows computer, press the Windows key and search for Remote Desktop Connection. Open it.</p>
+<p>Enter the IP address of your VPS in the Computer field. Click Connect.</p>
+<p>Enter the username and password you received. Click OK.</p>
+<p>You are now inside your Windows VPS. It looks and feels like a fresh Windows computer.</p>
+<h2>Step 2 Download MT5 on the VPS</h2>
+<p>Open a browser inside the VPS. Chrome or Edge is usually pre installed.</p>
+<p>Go to your broker website. Most brokers have a dedicated MT5 download page.</p>
+<p>Download the MT5 installer for Windows.</p>
+<p>Once the download finishes, run the installer. Follow the standard steps. MT5 installs in about one minute.</p>
+<h2>Step 3 Log In to Your Broker on MT5</h2>
+<p>Open MT5 after installation.</p>
+<p>Click File in the top menu. Click Login to Trade Account.</p>
+<p>Enter your account number, password and select your broker server from the dropdown.</p>
+<p>Click OK.</p>
+<p>You should see your account balance appear in the MT5 Navigator panel on the left side. If you do not see it, double check your login details or contact your broker.</p>
+<h2>Step 4 Install Your Expert Advisor</h2>
+<p>If you use EAs, this is how you add them.</p>
+<p>In MT5, click File and then Open Data Folder.</p>
+<p>A Windows Explorer window opens. Navigate to MQL5 then Experts.</p>
+<p>Copy your EA .ex5 files into this folder.</p>
+<p>Close and reopen MT5. Your EA now appears in the Navigator panel under Expert Advisors.</p>
+<h2>Step 5 Attach Your EA to a Chart</h2>
+<p>Open a chart for the currency pair you want to trade. For example EURUSD.</p>
+<p>Drag your EA from the Navigator panel onto the chart.</p>
+<p>A settings window opens. Configure your EA settings based on your strategy. Make sure you enable Allow Live Trading.</p>
+<p>Click OK.</p>
+<p>You should see a small smiley face in the top right corner of the chart. This means your EA is active.</p>
+<h2>Step 6 Enable AutoTrading</h2>
+<p>In the MT5 toolbar, look for the AutoTrading button. It is usually near the top of the screen.</p>
+<p>Click it to enable AutoTrading. The button turns green when it is on.</p>
+<p>Without this, your EA will not place trades even if it is attached to the chart. This is the most common mistake new users make.</p>
+<h2>Step 7 Set MT5 to Auto Start</h2>
+<p>If your VPS restarts for any reason, you want MT5 to start automatically. Here is how.</p>
+<p>Press Windows key plus R on your VPS. This opens the Run dialog.</p>
+<p>Type shell:startup and press Enter.</p>
+<p>A Startup folder opens. Right click on the MT5 shortcut on your desktop and copy it.</p>
+<p>Paste the shortcut into the Startup folder.</p>
+<p>Now MT5 will launch automatically every time the VPS restarts.</p>
+<h2>Step 8 Test Your Setup</h2>
+<p>Before you go live, test everything.</p>
+<p>Check that MT5 shows your account balance and connection status.</p>
+<p>Check that your EA has the smiley face next to it on the chart.</p>
+<p>Check that AutoTrading is enabled.</p>
+<p>Open a demo trade manually to confirm execution works.</p>
+<p>If everything checks out, your setup is complete. Your MT5 and EAs will now run 24 hours a day even when your home computer is off.</p>
+<h2>How to Pick the Right VPS Location for MT5</h2>
+<p>Server location matters more than specs for forex trading. The closer your VPS is to your broker server, the lower your latency and the fewer slippage problems you face.</p>
+<p>If your broker uses Mumbai servers, choose an India based VPS from Webyne, Hapih Host or VCCLHosting.</p>
+<p>If your broker uses London servers, choose a London or Bulgaria based VPS from pybanger.</p>
+<p>If your broker uses New York servers, choose a USA based VPS from pybanger.</p>
+<p>If your broker uses Singapore servers, choose a Singapore or Hong Kong based VPS from pybanger.</p>
+<p>A 5 millisecond latency difference can mean the difference between getting filled at your price or getting slipped. Always match VPS location to broker location.</p>
+<h2>How Much RAM Do You Need for MT5</h2>
+<p>Each MT5 terminal with active EAs uses around 1 to 1.5GB RAM.</p>
+<p>For 2 to 3 terminals, 4GB RAM is enough. This is the pybanger Starter plan at 999 rupees per month, Webyne plan at 599 rupees per month and VCCLHosting plan at 539 rupees per month.</p>
+<p>For 5 or more terminals, go with 8GB RAM. This is the pybanger Elite plan at 1499 rupees per month.</p>
+<p>If you run heavy backtesting alongside live trading, add another 2GB on top of your live trading estimate.</p>
+<h2>Common MT5 VPS Problems and Fixes</h2>
+<p>MT5 disconnects randomly. Check your VPS network settings. Also check if your broker connection is stable. If only MT5 disconnects but the VPS stays online, the issue is usually broker side.</p>
+<p>EA is not placing trades. Check three things. Is AutoTrading enabled in MT5. Is Allow Live Trading enabled in the EA settings. Is the EA attached to the correct chart.</p>
+<p>VPS restarts unexpectedly. Disable Windows automatic updates on the VPS. Set active hours to prevent surprise restarts. Also check your VPS provider control panel for scheduled maintenance.</p>
+<p>Latency is high. Check the distance between your VPS and your broker server. If your VPS is in Bulgaria and your broker is in Singapore, latency will be high. Move your VPS to match your broker location.</p>
+<p>MT5 runs slowly. Check RAM usage. If you are running 5 terminals on 4GB RAM, that is the problem. Upgrade to 8GB. Also check if your VPS uses NVMe storage. NVMe is much faster than old SATA drives.</p>
+<h2>Frequently Asked Questions</h2>
+<p>Can I run MT5 on a Linux VPS?</p>
+<p>MT5 is a Windows application. It does not run natively on Linux. You can use Wine to emulate Windows on Linux but this is not recommended for live trading because of stability issues. Always use a Windows VPS for MT5.</p>
+<p>Do I need a VPS if I only trade manually?</p>
+<p>No. If you trade manually and sit at your computer during sessions, a VPS is optional. But if you want to place pending orders and walk away, or if you live in a region with unstable power or internet, a VPS is worth it.</p>
+<p>Can I run multiple MT5 terminals on one VPS?</p>
+<p>Yes. pybanger Starter supports 3 MT5 terminals. pybanger Elite supports 8. Webyne and VCCLHosting plans also support multiple terminals depending on your RAM.</p>
+<p>How much does a good MT5 VPS cost in India?</p>
+<p>Entry level plans start at 299 rupees per month from Hapih Host and 539 rupees from VCCLHosting. For proper specs with NVMe and 4GB RAM, pybanger starts at 999 rupees per month. Webyne starts at 599 rupees per month for India based servers.</p>
+<p>How do I know if my VPS latency is good?</p>
+<p>Ping your broker server IP from your VPS. On Windows, open Command Prompt and type ping followed by your broker IP. Anything under 20 milliseconds is good. Under 5 milliseconds is excellent. Above 50 milliseconds you will notice slippage.</p>
+<p>Can I install MT4 alongside MT5?</p>
+<p>Yes. MT4 and MT5 are separate applications and can run side by side on the same VPS. pybanger, Webyne and VCCLHosting all support both.</p>
+<h2>Final Thoughts</h2>
+<p>Setting up MT5 on a Windows VPS takes about 30 minutes. Once done, your EAs run 24 hours a day without interruption.</p>
+<p>The most important choices are the VPS provider and the server location. Pick a provider with UPI payment and INR pricing so you do not deal with forex cards. Pick a location close to your broker so latency stays low.</p>
+<p>For most Indian traders running 2 to 3 EAs, pybanger Starter at 999 rupees per month is the best balance of price, payment convenience and global locations. If you have an Indian broker and need the lowest latency, Webyne at 599 rupees is worth considering.</p>
+<p>Once your MT5 is running on the VPS, you never have to worry about power cuts, internet drops or Windows updates again. Your EAs trade while you sleep.</p>
+
+
+      <div class="blog-cta">
+        <p>Ready to get started with a fast Forex VPS for Indian traders?</p>
+        <a href="https://wa.me/919207119319?text=Hi%20pybanger%2C%20I%27m%20interested%20in%20your%20Forex%20VPS"
+           class="btn-order"
+           target="_blank"
+           rel="noopener">
+          <i class="fab fa-whatsapp"></i> Get VPS from ₹999/month
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://pybanger.com" class="footer-logo">
+      <span class="logo-mark">
+        <span class="logo-square"></span>
+        <span class="logo-square"></span>
+      </span>
+      <span class="logo-text">pybanger</span>
+    </a>
+    <p class="footer-tagline">Forex VPS, MT5 bots and custom software.</p>
+    <p class="footer-copyright">
+      © 2026 pybanger. All rights reserved.<br>
+      Based in Kerala, India.
+    </p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919207119319?text=Hi%20pybanger%2C%20I%27m%20interested%20in%20your%20Forex%20VPS"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
